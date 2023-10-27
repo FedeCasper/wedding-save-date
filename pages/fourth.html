@@ -1,53 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="preconnect" href="https://fonts.googleapis.com">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+   <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet">
    <script src="https://cdn.tailwindcss.com"></script>
-   <script src="./tailwind.config.js"></script>
+   <script>
+      tailwind.config = {
+         theme: {
+            extend: {
+               colors: {
+                  myskin: '#EAE8E4',
+                  mygray: '#404040',
+                  mygreen: '#5D7551',
+                  mybrown: '#C49F5F',
+               }
+            }
+         }
+      }
+   </script>
    <link rel="stylesheet" href="../style.css">
    <title>Fourth</title>
 </head>
+
 <body class=" overflow-hidden">
 
-   <section class="h-[100vh] w-full flex flex-col justify-around items-center bg-[url('../assets/background-03.png')] relative">
+   <section class="h-[100vh] w-full flex flex-col justify-between items-center bg-[url('../assets/background-03.png')] relative overflow-hidden">
 
       <img class="spinner-text" src="../assets/rounded-text-06.png" alt="">
 
       <!-- Navbar -->
-      <div class=" h-[15vh] flex items-center gap-2">
-         <a href="../index.html" class=" h-2 w-2 bg-[#C49F5F] rounded-full" title="first-slide"></a>
-         <a href="#" class=" active-link  rounded-full " title="second-slide"></a>
-         <a href="./third.html" class=" h-2 w-2 bg-[#C49F5F] rounded-full " title="third-slide"></a>
-         <a href="#" class=" h-2 w-2 bg-[#C49F5F] rounded-full " title="fourth-slide"></a>
+      <div class="h-[15vh] flex items-center gap-3">
+         <a href="../index.html" class="disable-slot" title="first-slide"></a>
+         <a href="./second.html" class="disable-slot" title="second-slide"></a>
+         <a href="./third.html" class="disable-slot" title="third-slide"></a>
+         <a href="#" class="active-slot" title="fourth-slide"></a>
       </div>
 
-
-      <div id='countdown' class=" flex justify-around w-3/4 ">
-         <div class="flex flex-col items-center">
-           <div class="h-16 w-16 flex justify-center items-center bg-white rounded-lg p-4" id='days'></div>
-           <div class='text-xs mt-3'>Días</div>
-         </div>
-         <div class="flex flex-col items-center">
-           <div class="h-16 w-16 flex justify-center items-center bg-white rounded-lg p-4" id='hours'></div>
-           <div class='text-xs mt-3'>Horas</div>
-         </div>
-         <div class="flex flex-col items-center">
-           <div class="h-16 w-16 flex justify-center items-center bg-white rounded-lg p-4" id='minutes'></div>
-           <div class='text-xs mt-3'>Minutos</div>
-         </div>
-         <div class="flex flex-col items-center">
-           <div class="h-16 w-16 flex justify-center items-center bg-white rounded-lg p-4" id='seconds'></div>
-           <div class='text-xs mt-3'>Segundos</div>
-         </div>
-       </div>
-
-
       <!-- Footer -->
-      <section class="h-[15vh] flex flex-col items-center gap-4 z-50">
+      <section class="h-[65vh] w-[290vw] flex flex-col justify-center items-center gap-4 z-50 bg-mybrown rounded-tl-full rounded-tr-full">
+         
+      <h2>Faltan...</h2>
+      <div id='countdown' class=" flex justify-around w-1/4 gap-6 ">
+         <div class="flex flex-col items-center">
+            <div class="h-16 w-16 flex justify-center items-center bg-white rounded-lg p-4" id='days'></div>
+            <div class='text-xs mt-3'>Días</div>
+         </div>
+         <div class="flex flex-col items-center">
+            <div class="h-16 w-16 flex justify-center items-center bg-white rounded-lg p-4" id='hours'></div>
+            <div class='text-xs mt-3'>Horas</div>
+         </div>
+         <div class="flex flex-col items-center">
+            <div class="h-16 w-16 flex justify-center items-center bg-white rounded-lg p-4" id='minutes'></div>
+            <div class='text-xs mt-3'>Minutos</div>
+         </div>
+         <div class="flex flex-col items-center">
+            <div class="h-16 w-16 flex justify-center items-center bg-white rounded-lg p-4" id='seconds'></div>
+            <div class='text-xs mt-3'>Segundos</div>
+         </div>
+      </div>
+
          <h2 class="text-sm">Cuenta Regresiva</h2>
          <h2 class="text-sm">Escribinos</h2>
       </section>
@@ -56,6 +73,7 @@
    </section>
 
    <script src="../scripts/fourth.js"></script>
-   
+
 </body>
+
 </html>
