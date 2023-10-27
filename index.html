@@ -1,16 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="preconnect" href="https://fonts.googleapis.com">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+   <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet">
    <script src="https://cdn.tailwindcss.com"></script>
-   <script src="./tailwind.config.js"></script>
+   <script>
+      tailwind.config = {
+         theme: {
+            extend: {
+               colors: {
+                  myskin: '#EAE8E4',
+                  mygray: '#404040',
+                  mygreen: '#5D7551',
+                  mybrown: '#5D7551',
+               }
+            }
+         }
+      }
+   </script>
    <link rel="stylesheet" href="style.css">
    <title>Invitacion</title>
 </head>
+
 <body>
 
    <section class="h-[100vh] flex flex-col justify-around items-center bg-[url('./assets/background-03.png')]">
@@ -20,10 +37,10 @@
       </div>
 
       <div class=" h-[15vh] flex items-center gap-2">
-         <div class=" border-2 border-[#5F7752] h-3 w-3 bg-white rounded-full cursor-pointer"></div>
-         <a href="./pages/second.html" class=" h-2 w-2 bg-[#C49F5F] rounded-full cursor-pointer" title="second-slide"></a>
-         <a href="#" class=" h-2 w-2 bg-[#C49F5F] rounded-full cursor-pointer" title="third-slide"></a>
-         <a href="#" class=" h-2 w-2 bg-[#C49F5F] rounded-full cursor-pointer" title="fourth-slide"></a>
+         <div class="  active-link rounded-full"></div>
+         <a href="./pages/second.html" class=" h-2 w-2 bg-[#C49F5F] rounded-full " title="second-slide"></a>
+         <a href="#" class=" h-2 w-2 bg-[#C49F5F] rounded-full " title="third-slide"></a>
+         <a href="#" class=" h-2 w-2 bg-[#C49F5F] rounded-full " title="fourth-slide"></a>
       </div>
 
       <section class="h-[55vh] flex flex-col justify-center items-center gap-4">
@@ -34,11 +51,12 @@
       </section>
 
       <section class="h-[25vh]">
-         <button class="bg-[#5F7752] py-2 px-8 rounded-lg text-white" type="submit">Entrar</button>
+         <div class="bg-mygreen py-2 px-8 rounded-lg text-white">Entrar</div>
       </section>
 
 
    </section>
-   
+
 </body>
+
 </html>
