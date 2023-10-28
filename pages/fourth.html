@@ -25,14 +25,12 @@
       }
    </script>
    <link rel="stylesheet" href="../style.css">
-   <title>Fourth</title>
+   <title>Countdown</title>
 </head>
 
 <body class=" overflow-hidden">
 
    <section class="h-[100vh] w-full flex flex-col justify-between items-center bg-[url('../assets/background-03.png')] relative overflow-hidden">
-
-      <img class="spinner-text" src="../assets/rounded-text-06.png" alt="">
 
       <!-- Navbar -->
       <div class="h-[15vh] flex items-center gap-3">
@@ -43,37 +41,37 @@
       </div>
 
             <!-- Photos -->
-            <section class="h-[70vh] border-2  border-red-300 w-[180vw] flex flex-col justify-center items-center gap-4  group z-30">
+            <section class="h-[70vh] w-[180vw] flex flex-col justify-center items-center gap-4  group z-30">
 
                <!-- Background curve -->
                <div class="h-[60vh] w-[200vw] absolute bottom-0 bg-mybrown rounded-tl-full rounded-tr-full"></div>
 
-               <article class="relative w-full flex flex-col justify-center items-center py-6 border-2 h-5/6 border-lime-600 z-10">
+               <article class="relative w-full flex flex-col justify-center items-center py-6 h-5/6 z-10">
       
-                  <section class="h-[15%] relative flex flex-col justify-end items-center gap-2 z-10 border-2 border-green-600">
+                  <section class="h-[15%] relative flex flex-col justify-end items-center gap-2 z-10 ">
                      <img src="../assets/rounded-text-countdown-01.png" class="absolute h-24 w-24 left-44" alt="" />
                      <img src="../assets/header-tittle-06.png" alt="title" class="w-2/12 mb-2">
                      <img src="../assets/names-06.png" alt="names" class="w-3/12 mb-4 z-10">
                   </section>
 
-                  <div class="h-[70%] w-full flex flex-col justify-end items-center gap-2 border-2 pb-14 border-sky-400 z-10">
-                     <h2 class="mb-4">Faltan...</h2>
+                  <div class="h-[70%] w-full flex flex-col justify-end items-center gap-2 pb-14 z-10">
+                     <h2 class="mb-4 text-white">Faltan...</h2>
                      <div id='countdown' class=" flex justify-around w-1/4 gap-6 ">
                         <div class="flex flex-col items-center">
-                           <div class="h-16 w-16 flex justify-center items-center bg-white rounded-lg p-4" id='days'></div>
-                           <div class='text-xs mt-3'>Días</div>
+                           <div class="h-16 w-16 flex justify-center items-center bg-white rounded-lg p-4 font-bold text-[#404040]" id='days'></div>
+                           <div class='text-xs mt-3 text-white'>Días</div>
                         </div>
                         <div class="flex flex-col items-center">
-                           <div class="h-16 w-16 flex justify-center items-center bg-white rounded-lg p-4" id='hours'></div>
-                           <div class='text-xs mt-3'>Horas</div>
+                           <div class="h-16 w-16 flex justify-center items-center bg-white rounded-lg p-4 font-bold text-[#404040]" id='hours'></div>
+                           <div class='text-xs mt-3 text-white'>Horas</div>
                         </div>
                         <div class="flex flex-col items-center">
-                           <div class="h-16 w-16 flex justify-center items-center bg-white rounded-lg p-4" id='minutes'></div>
-                           <div class='text-xs mt-3'>Minutos</div>
+                           <div class="h-16 w-16 flex justify-center items-center bg-white rounded-lg p-4 font-bold text-[#404040]" id='minutes'></div>
+                           <div class='text-xs mt-3 text-white'>Minutos</div>
                         </div>
                         <div class="flex flex-col items-center">
-                           <div class="h-16 w-16 flex justify-center items-center bg-white rounded-lg p-4" id='seconds'></div>
-                           <div class='text-xs mt-3'>Segundos</div>
+                           <div class="h-16 w-16 flex justify-center items-center bg-white rounded-lg p-4 font-bold text-[#404040]" id='seconds'></div>
+                           <div class='text-xs mt-3 text-white'>Segundos</div>
                         </div>
                      </div>
                   </div>
@@ -87,12 +85,6 @@
             <section class="h-[15vh]">
 
             </section>
-
-      <!-- Footer -->
-      <!-- <section class="h-[65vh] w-[290vw] flex flex-col justify-center items-center gap-4 z-50 ">
-         
-      </section> -->
-
 
    </section>
 
