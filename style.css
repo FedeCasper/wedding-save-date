@@ -127,39 +127,35 @@
    animation-fill-mode: forwards;
 }
 
-.pic1{
+
+
+@keyframes pic1-grow {
+   0% {
+      opacity: 0;
+      transform: rotate(15deg);
+   }
+   100% {
+      transform: rotate(-15deg);
+      opacity: 1;
+   }
+ }
+
+ .pic1{
    height: 200px;
    width: 150px;
    background-color: antiquewhite;
    position: absolute;
    opacity: 0;
+   transition: all 1s ease-in-out;
 }
-
-@keyframes pic1-grow {
-   0% {
-      opacity: 0;
-      transform: scale(0.1) rotate(15deg);
-   }
-   25%{
-      
-   }
-   75%{
-      transform: scale(1.2);
-   }
-   100% {
-      transform: scale(1) rotate(-15deg);
-      opacity: 1;
-   }
- }
-
 
  .pic1{
    animation: pic1-grow 0.6s ease-in-out forwards;
    animation-delay: 1.4s;
  }
 
+
  .group:hover .pic1 {
-   /* Agrega aquí los estilos que desees para el div pic1 cuando el cursor esté sobre el contenedor padre */
-   background-color: blueviolet;
-   transform: translateX(150px) !important;
+   transform: translateY(-150px) translateX(-100%) !important;
 }
+
