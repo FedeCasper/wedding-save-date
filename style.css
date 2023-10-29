@@ -1,49 +1,165 @@
-@import url('https://fonts.googleapis.com/css2?family=Gabarito:wght@400;500;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Young+Serif&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Gabarito:wght@400;500;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Young+Serif&display=swap");
 
-*{
-   border: 1px solid red;
-   font-family: 'Poppins', sans-serif;
+* {
+  /* border: 1px solid red; */
+  font-family: "Poppins", sans-serif;
 }
 
-:root{
-   --mycream: '#EAE8E4',
-   --mygray: '#404040',
-   --mygreen: '#5D7551',
-   --mybrown: '#C49F5F',
+:root {
+  --mycream: "#EAE8E4";
+  --mygray: "#404040";
+  --mygreen: "#5D7551";
+  --mybrown: "#C49F5F";
 }
 
-@keyframes spin1{
-   from{
-      transform: rotate(0deg);
+@keyframes spin1 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.spinner-text {
+  position: absolute;
+  top: 50px;
+  left: -75px;
+  height: 150px;
+  width: 150px;
+  animation-name: spin1;
+  animation-duration: 20s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.active-slot {
+  border: 3px solid #5d7551;
+  height: 13px;
+  width: 13px;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.disable-slot {
+  height: 8px;
+  width: 8px;
+  background-color: #c49f5f;
+  border-radius: 50%;
+}
+
+@keyframes cirle-rotation {
+  0% {
+    transform: rotate(-45deg);
+    opacity: 0;
+  }
+  75% {
+    transform: rotate(5deg);
+  }
+  100% {
+    transform: rotate(0);
+    opacity: 1;
+  }
+}
+
+.circle {
+  animation: cirle-rotation 2s ease-in-out;
+}
+
+@keyframes button-grow {
+  0% {
+    transform: scaleY(0);
+    opacity: 0;
+  }
+  75% {
+    transform: scaleY(1.2);
+  }
+  100% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+
+.button-agendar {
+  transform-origin: top;
+  animation: button-grow 1s ease-in-out;
+  animation-delay: 0.6s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes form-left-to-right {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  75%{
+   transform: translateX(5%);
+  }
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes form-right-to-left {
+   0% {
+     transform: translateX(100%);
+     opacity: 0;
    }
-   to{
-      transform: rotate(360deg);
+   75%{
+    transform: translateX(-5%);
    }
+   100% {
+     transform: translateX(0%);
+     opacity: 1;
+   }
+ }
+
+.countdown {
+  animation: form-left-to-right 0.7s ease-in-out;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
 }
 
-.spinner-text{
-   position: absolute;
-   top: 50px;
-   left: -75px;
-   height: 150px;
+.write{
+   animation: form-right-to-left 0.7s ease-in-out;
+   animation-delay: 1.3s;
+   animation-fill-mode: forwards;
+}
+
+.pic1{
+   height: 200px;
    width: 150px;
-   animation-name: spin1;
-   animation-duration: 20s;
-   animation-timing-function: linear;
-   animation-iteration-count: infinite;
+   background-color: antiquewhite;
+   position: absolute;
+   opacity: 0;
 }
 
-.active-slot{
-   border: 3px solid #5D7551;
-   height: 13px;
-   width: 13px;
-   background-color: white;
-   border-radius: 50%;
-}
+@keyframes pic1-grow {
+   0% {
+      opacity: 0;
+      transform: scale(0.1) rotate(15deg);
+   }
+   25%{
+      
+   }
+   75%{
+      transform: scale(1.2);
+   }
+   100% {
+      transform: scale(1) rotate(-15deg);
+      opacity: 1;
+   }
+ }
 
-.disable-slot{
-   height: 8px;
-   width: 8px;
-   background-color: #C49F5F;
-   border-radius: 50%;
+
+ .pic1{
+   animation: pic1-grow 0.6s ease-in-out forwards;
+   animation-delay: 1.4s;
+ }
+
+ .group:hover .pic1 {
+   /* Agrega aquí los estilos que desees para el div pic1 cuando el cursor esté sobre el contenedor padre */
+   background-color: blueviolet;
+   transform: translateX(150px) !important;
 }
