@@ -12,7 +12,7 @@
   --mybrown: "#C49F5F";
 }
 
-@keyframes spin1 {
+@keyframes text-rotation {
   from {
     transform: rotate(0deg);
   }
@@ -27,10 +27,7 @@
   left: -75px;
   height: 150px;
   width: 150px;
-  animation-name: spin1;
-  animation-duration: 20s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
+  animation: text-rotation 20s linear infinite;
 }
 
 .active-slot {
@@ -82,18 +79,17 @@
 
 .button-agendar {
   transform-origin: top;
-  animation: button-grow 1s ease-in-out;
+  animation: button-grow 1s ease-in-out forwards;
   animation-delay: 0.6s;
-  animation-fill-mode: forwards;
 }
 
-@keyframes form-left-to-right {
+@keyframes text-left-to-right {
   0% {
     transform: translateX(-100%);
     opacity: 0;
   }
-  75%{
-   transform: translateX(5%);
+  75% {
+    transform: translateX(5%);
   }
   100% {
     transform: translateX(0%);
@@ -101,61 +97,80 @@
   }
 }
 
-@keyframes form-right-to-left {
-   0% {
-     transform: translateX(100%);
-     opacity: 0;
-   }
-   75%{
+@keyframes text-right-to-left {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  75% {
     transform: translateX(-5%);
-   }
-   100% {
-     transform: translateX(0%);
-     opacity: 1;
-   }
- }
+  }
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
 
 .countdown {
-  animation: form-left-to-right 0.7s ease-in-out;
+  animation: text-left-to-right 0.7s ease-in-out forwards;
   animation-delay: 1s;
-  animation-fill-mode: forwards;
 }
 
-.write{
-   animation: form-right-to-left 0.7s ease-in-out;
-   animation-delay: 1.3s;
-   animation-fill-mode: forwards;
+.write {
+  animation: text-right-to-left 0.7s ease-in-out forwards;
+  animation-delay: 1.3s;
 }
 
-
-
-@keyframes pic1-grow {
-   0% {
-      opacity: 0;
-      transform: rotate(15deg);
-   }
-   100% {
-      transform: rotate(-15deg);
-      opacity: 1;
-   }
- }
-
- .pic1{
-   height: 200px;
-   width: 150px;
-   background-color: antiquewhite;
-   position: absolute;
-   opacity: 0;
-   transition: all 1s ease-in-out;
+@keyframes pic-grow {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
- .pic1{
-   animation: pic1-grow 0.6s ease-in-out forwards;
-   animation-delay: 1.4s;
- }
-
-
- .group:hover .pic1 {
-   transform: translateY(-150px) translateX(-100%) !important;
+.pic1 {
+  height: 200px;
+  width: 150px;
+  background-color: antiquewhite;
+  position: absolute;
+  opacity: 0;
+  transform: rotate(-15deg);
+  transition: all 1s ease-in-out;
+  animation: 0.4s ease-in-out 1s forwards pic-grow;
 }
 
+.group:hover .pic1 {
+  transform: translateY(-150px) translateX(-100%) rotate(-15deg);
+}
+
+.pic2 {
+  height: 200px;
+  width: 150px;
+  background-color: rgb(215, 250, 242);
+  position: absolute;
+  opacity: 0;
+  transform: rotate(0);
+  transition: all 1s ease-in-out;
+  animation: 0.4s ease-in-out 2s forwards pic-grow;
+}
+
+.group:hover .pic2 {
+  transform: translateY(150px) translateX(100%) rotate(15deg);
+}
+
+.pic3 {
+  height: 200px;
+  width: 150px;
+  background-color: rgb(237, 212, 255);
+  position: absolute;
+  opacity: 0;
+  transform: rotate(15deg);
+  transition: all 1s ease-in-out;
+  animation: 0.4s ease-in-out 3s forwards pic-grow;
+}
+
+.group:hover .pic3 {
+  transform: translateY(0) translateX(0);
+}
