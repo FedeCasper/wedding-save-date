@@ -13,6 +13,15 @@
 }
 
 @keyframes text-rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes text-rotation2 {
   0% {
     transform: rotate(0deg);
   }
@@ -37,7 +46,8 @@
 
 .spinner-text {
   transform-origin: 50% 50%;
-  animation: text-rotation 5s linear infinite ;
+  /*linear infinte running*/
+  animation: text-rotation 10s linear infinite;
 }
 
 .active-slot {
