@@ -12,6 +12,10 @@
   --mybrown: #C49F5F;
 }
 
+body{
+  background-color: var(--mycream);
+}
+
 @keyframes text-rotation {
   from {
     transform: rotate(0deg);
