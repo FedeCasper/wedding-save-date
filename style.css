@@ -13,17 +13,31 @@
 }
 
 @keyframes text-rotation {
-  from {
+  0% {
     transform: rotate(0deg);
   }
-  to {
+  15%{
+    transform: rotate(60deg);
+  }
+  45%{
+    opacity: 0;
+    transform: rotate(150deg);
+  }
+  65%{
+    transform: rotate(225deg);
+  }
+  85%{
+    transform: rotate(300deg);
+    opacity: 1;
+  }
+  100% {
     transform: rotate(360deg);
   }
 }
 
 .spinner-text {
   transform-origin: 50% 50%;
-  animation: text-rotation 10s linear infinite;
+  animation: text-rotation 5s linear infinite ;
 }
 
 .active-slot {
@@ -158,8 +172,9 @@
   transform: translateY(0) translateX(0);
 }
 
-
+/* --------------- */
 /* Button Agendar*/
+/* --------------- */
 .button {
   position: relative;
   padding: 8px 25px;
