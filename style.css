@@ -39,9 +39,16 @@
 }
 
 .disable-slot {
-  height: 8px;
-  width: 8px;
+  height: 9px;
+  width: 9px;
   background-color: #c49f5f;
+  border-radius: 50%;
+}
+
+.disable-slot:hover{
+  border: 3px solid #5d7551;
+  height: 13px;
+  width: 13px;
   border-radius: 50%;
 }
 
