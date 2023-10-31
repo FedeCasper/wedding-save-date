@@ -161,7 +161,6 @@ a {
   background-repeat: no-repeat;
   position: absolute;
   opacity: 0;
-  box-shadow:2px 2px 5px #404040;
   transform: rotate(-15deg);
   transition: all 1s ease-in-out;
   animation: 0.4s ease-in-out 1s forwards pic-grow;
@@ -175,7 +174,6 @@ a {
   background-repeat: no-repeat;
   position: absolute;
   opacity: 0;
-  box-shadow:2px 2px 5px #404040;
   transform: rotate(0);
   transition: all 1s ease-in-out;
   animation: 0.4s ease-in-out 2s forwards pic-grow;
@@ -189,7 +187,6 @@ a {
   background-repeat: no-repeat;
   position: absolute;
   opacity: 0;
-  box-shadow:2px 2px 5px #404040;
   transform: rotate(15deg);
   transition: all 1s ease-in-out;
   animation: 0.4s ease-in-out 3s forwards pic-grow;
