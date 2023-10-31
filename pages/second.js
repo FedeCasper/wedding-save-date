@@ -5,6 +5,8 @@ const picOne = document.getElementById('first-pic')
 const picTwo = document.getElementById('second-pic')
 const picThree = document.getElementById('third-pic')
 
+let toogle = true
+
 // $picContainer.addEventListener('mouseover', () => {
 //    picOne.style.transform = 'translateY(-150px) translateX(-100%) rotate(-15deg)';
 //    picThree.style.transform = 'translateY(150px) translateX(100%) rotate(15deg)';
@@ -19,13 +21,15 @@ const picThree = document.getElementById('third-pic')
 // translateY(-150px) translateX(-100%) rotate(-15deg)
 
 $picContainer.addEventListener('touchstart', () => {
-   picOne.style.transform = 'translateY(-150px) translateX(-100%) rotate(-15deg)';
-   picThree.style.transform = 'translateY(150px) translateX(100%) rotate(15deg)';
-   $picCircle.style.transform = 'rotate(360deg)';
+   if(toogle){
+      toogle = false
+      picOne.style.transform = 'translateY(-150px) translateX(-100%) rotate(-15deg)';
+      picThree.style.transform = 'translateY(150px) translateX(100%) rotate(15deg)';
+      $picCircle.style.transform = 'rotate(360deg)';
+   }else{
+      toogle = true
+      picOne.style.transform = 'none'; 
+      picThree.style.transform = 'none'; 
+      $picCircle.style.transform = 'none';
+   }
 })
-
-$picContainer.addEventListener('touchend', () => {
-   picOne.style.transform = 'none'; 
-   picThree.style.transform = 'none'; 
-   $picCircle.style.transform = 'none';
-});
