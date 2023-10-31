@@ -25,7 +25,7 @@ $picContainer.addEventListener('touchstart', () => {
 })
 
 $picContainer.addEventListener('touchend', () => {
-   picOne.style.transform = 'translate(0) rotate(-15deg)'; 
-   picThree.style.transform = 'translate(0) rotate(15deg)'; 
-   $picCircle.style.transform = 'rotate(0deg)';
+   picOne.style.transform = 'none'; 
+   picThree.style.transform = 'none'; 
+   $picCircle.style.transform = 'none';
 });
