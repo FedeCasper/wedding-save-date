@@ -40,8 +40,10 @@ a {
   15%{
     transform: rotate(60deg);
   }
-  45%{
+  16%{
     opacity: 0;
+  }
+  45%{
     transform: rotate(150deg);
   }
   65%{
@@ -49,7 +51,7 @@ a {
   }
   85%{
     transform: rotate(300deg);
-    opacity: 1;
+    visibility: visible;
   }
   100% {
     transform: rotate(360deg);
