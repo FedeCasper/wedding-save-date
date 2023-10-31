@@ -196,7 +196,7 @@ body{
   border: none;
   color: #fff;
   cursor: pointer;
-  background-color: var(--mygreen) !important;
+  background-color: #5D7551 !important;
   transition: all 0.2s ease;
 }
 
