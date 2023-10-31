@@ -15,14 +15,17 @@
    <title>Welcome</title>
 </head>
 
-<body class="relative">
+<body>
 
    <section class="h-[100vh] flex flex-col justify-between items-center bg-[url('./assets/background-03.png')] bg-contain bg-repeat">
 
+      <!-- Spinner text and circle -->
       <img class="spinner-text absolute top-[50px] -left-[75px] h-[150px] w-[150px]" src="./assets/rounded-text-06.png" alt="">
 
       <!-- Navbar -->
-      <nav class="h-[10vh] w-[200px] flex justify-center items-end gap-3">
+      <nav class="h-[10vh] w-[200px] flex justify-center items-end gap-3
+         border-2 border-blue-400">
+
          <div class="w-8 h-8 flex justify-center items-center">
             <a href="#" class="active-slot" title="first-slide"></a>
          </div>
@@ -32,36 +35,39 @@
          <div class="w-8 h-8 flex justify-center items-center">
             <a href="./pages/third.html" class="disable-slot" title="third-slide"></a>
          </div>
+
       </nav>
 
-      <!-- Photos -->
-      <section class="h-[65vh] w-full flex flex-col justify-center items-center gap-4 relative group z-30">
+      <!-- Main -->
+      <main class="h-[65vh] w-full flex flex-col justify-center items-center gap-4 relative group z-30
+         border-2 border-purple-500">
 
          <article class="relative w-11/12 flex flex-col justify-center items-center py-6 h-5/6 z-10">
-
             <div class="h-[85%] w-80 flex flex-col justify-center items-center gap-2 z-10">
                <img src="./assets/header-tittle-06.png" alt="title" class="w-7/12 mb-4">
                <img src="./assets/names-06.png" alt="names" class="w-5/6 mb-4">
                <div class="w-3/6 border-2 border-t-[#C49F5F]"></div>
                <h3 class="text-center text-[#404040] text-[22px] mt-2">9 de marzo 2024</h3>
             </div>
+         </article>
+         
+      </main>
 
+      <!-- Footer -->
+      <footer class="flex flex-col items-center h-[25vh] gap-2 relative
+         border-2 border-red-400">
 
-      </article>
-
-      </section>
-
-      <section class="flex flex-col items-center h-[25vh] gap-2 relative">
          <a href="./pages/second.html" class="py-4 px-12 rounded-lg bg-[#5F7752] text-white text-lg">Save the date</a>
          <a href="./third.html" class="text-md countdown opacity-0 cursor-pointer p-2
-            transition-all duration-500 ease-in-out delay-150 hover:font-bold hover:text-[#5D7551] hover:text-base">
+            transition-all duration-300 ease-in-out delay-150 hover:font-bold hover:text-[#5D7551]">
             Cuenta Regresiva
          </a>
          <a href="https://api.whatsapp.com/send?phone=2616189574" class="text-md write opacity-0 cursor-pointer p-2
-            transition-all duration-500 ease-in-out delay-150 hover:font-bold hover:text-[#5D7551] hover:text-base">
+            transition-all duration-300 ease-in-out delay-150 hover:font-bold hover:text-[#5D7551]">
             Escribinos
          </a>
-      </section>
+
+      </footer>
 
 
    </section>
