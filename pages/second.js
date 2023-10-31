@@ -25,8 +25,8 @@ let toogle = true
 $picContainer.addEventListener('touchstart', () => {
    if(toogle){
       toogle = false
-      picOne.style.transform = 'translateY(-150px) translateX(-100%) rotate(-15deg)';
-      picThree.style.transform = 'translateY(150px) translateX(100%) rotate(15deg)';
+      picOne.style.transform = 'translateY(-150px) translateX(-75%) rotate(15deg)';
+      picThree.style.transform = 'translateY(150px) translateX(75%) rotate(-15deg)';
    }else{
       toogle = true
       picOne.style.transform = 'translateY(0) rotate(-15deg)'; 
