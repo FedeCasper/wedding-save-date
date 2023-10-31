@@ -16,10 +16,13 @@ body{
   background-color: var(--mycream);
 }
 
-a{
-  -webkit-tap-highlight-color: transparent; 
-  tap-highlight-color: transparent;
+a {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important; /* Safari y Chrome */
+  -webkit-user-drag: none !important; /* Safari (puede evitar el resaltado al mover elementos) */
+  user-drag: none !important; /* Otros navegadores */
+  touch-action: manipulation !important; /* Algunos navegadores más modernos */
 }
+
 
 @keyframes text-rotation {
   from {
@@ -204,8 +207,10 @@ a{
   background-color: #5D7551 !important;
   transition: all 0.2s ease;
   user-select: none;
-  -webkit-tap-highlight-color: transparent; 
-  tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important; /* Safari y Chrome */
+  -webkit-user-drag: none !important; /* Safari (puede evitar el resaltado al mover elementos) */
+  user-drag: none !important; /* Otros navegadores */
+  touch-action: manipulation !important; /* Algunos navegadores más modernos */
 }
 
 .button:active {
