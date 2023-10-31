@@ -25,11 +25,19 @@ $picContainer.addEventListener('touchstart', () => {
       toogle = false
       picOne.style.transform = 'translateY(-150px) translateX(-100%) rotate(-15deg)';
       picThree.style.transform = 'translateY(150px) translateX(100%) rotate(15deg)';
-      $picCircle.style.transform = 'rotate(360deg)';
    }else{
       toogle = true
-      picOne.style.transform = 'none'; 
-      picThree.style.transform = 'none'; 
-      $picCircle.style.transform = 'none';
+      picOne.style.transform = 'translateY(0) rotate(-15deg)'; 
+      picThree.style.transform = 'translateY(0) rotate(15deg)'; 
    }
+})
+
+$picContainer.addEventListener('mouseenter', () => {
+      picOne.style.transform = 'translateY(-150px) translateX(-100%) rotate(-15deg)';
+      picThree.style.transform = 'translateY(150px) translateX(100%) rotate(15deg)';
+})
+
+$picContainer.addEventListener('mouseleave', () => {
+   picOne.style.transform = 'translateY(0) rotate(-15deg)'; 
+   picThree.style.transform = 'translateY(0) rotate(15deg)'; 
 })
