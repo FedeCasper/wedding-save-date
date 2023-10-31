@@ -46,7 +46,7 @@ $picContainer.addEventListener('mouseleave', () => {
 
 $footerButtons.forEach(element => element.addEventListener('mouseover', (e) => {
    if(e.target.classList[0]){
-      element.style.color = 'red'
+      element.style.color = '#5D7551'
       element.style.fontWeight = 'bold'
       element.style.transform = 'scale(1.2)'
    }
