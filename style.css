@@ -142,8 +142,8 @@ body{
 }
 
 .pic1 {
-  height: 200px;
-  width: 150px;
+  height: 275px;
+  width: 200px;
   background-color: antiquewhite;
   position: absolute;
   opacity: 0;
@@ -157,8 +157,8 @@ body{
 }
 
 .pic2 {
-  height: 200px;
-  width: 150px;
+  height: 275px;
+  width: 200px;
   background-color: rgb(215, 250, 242);
   position: absolute;
   opacity: 0;
@@ -172,8 +172,8 @@ body{
 }
 
 .pic3 {
-  height: 200px;
-  width: 150px;
+  height: 275px;
+  width: 200px;
   background-color: rgb(237, 212, 255);
   position: absolute;
   opacity: 0;
