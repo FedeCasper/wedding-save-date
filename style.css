@@ -16,6 +16,11 @@ body{
   background-color: var(--mycream);
 }
 
+a{
+  -webkit-tap-highlight-color: transparent; 
+  tap-highlight-color: transparent;
+}
+
 @keyframes text-rotation {
   from {
     transform: rotate(0deg);
@@ -199,6 +204,8 @@ body{
   background-color: #5D7551 !important;
   transition: all 0.2s ease;
   user-select: none;
+  -webkit-tap-highlight-color: transparent; 
+  tap-highlight-color: transparent;
 }
 
 .button:active {
