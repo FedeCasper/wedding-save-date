@@ -25,13 +25,15 @@
          }
       }
    </script>
-   <link rel="stylesheet" href="../style.css">
+   <!-- <link rel="stylesheet" href="../style.css"> -->
+   <link rel="stylesheet" href="./countdown.css">
    <title>Countdown</title>
 </head>
 
 <body class=" overflow-hidden">
 
-   <section class="h-[100vh] w-full flex flex-col justify-between items-center bg-[url('../assets/background-03.png')] bg-contain bg-repeat relative overflow-hidden">
+   <section
+      class="h-[100vh] w-full flex flex-col justify-between items-center bg-[url('../assets/background-03.png')] bg-contain bg-repeat relative overflow-hidden">
 
       <!-- Navbar -->
       <nav class="h-[10vh] w-[200px] flex justify-center items-end gap-3 mb-auto">
@@ -51,14 +53,18 @@
       <main class="h-[70vh] w-[180vw] flex flex-col justify-center items-center gap-4  group z-30">
 
          <!-- Background curve -->
-         <div class="h-[60vh] w-[200vw] absolute bottom-0 bg-[url('../assets/rounded-background-03.png')] rounded-tl-full rounded-tr-full"></div>
+         <div
+            class="h-[60vh] w-[200vw] absolute bottom-0 bg-[url('../assets/rounded-background-03.png')] rounded-tl-full rounded-tr-full">
+         </div>
 
          <article id="spinner" class="relative w-full flex flex-col justify-center items-center py-6 h-5/6 z-10">
 
             <section class="h-[15%] relative flex flex-col justify-end items-center gap-2  z-10">
 
-               <img src="../assets/rounded-text-countdown-01.png" class="spinner-text absolute h-24 w-24 -left-8 -top-8 z-10" alt="" />
-               <div class="w-fit bg-[url('../assets/background-03.png')] flex flex-col justify-end items-center z-30 py-1 px-2">
+               <img src="../assets/rounded-text-countdown-01.png"
+                  class="spinner-text absolute h-24 w-24 -left-8 -top-8 z-10" alt="" />
+               <div
+                  class="w-fit bg-[url('../assets/background-03.png')] flex flex-col justify-end items-center z-30 py-1 px-2">
                   <div class="bg-white h-12 w-12 rounded-full absolute -top-[10px] -left-[5px] z-30"></div>
                   <img src="../assets/header-tittle-06.png" alt="title" class="h-[1.2rem] mb-2 relative z-40">
                   <img src="../assets/names-06.png" alt="names" class="h-[2.2rem] mb-4 relative z-40">
@@ -77,28 +83,30 @@
                   </div>
                   <div class="flex flex-col items-center">
                      <div
-                     class="h-16 w-16 flex justify-center items-center bg-white rounded-lg p-2 font-bold text-[#404040] text-2xl"
+                        class="h-16 w-16 flex justify-center items-center bg-white rounded-lg p-2 font-bold text-[#404040] text-2xl"
                         id='hours'></div>
                      <div class='text-xs mt-3 text-white'>Horas</div>
                   </div>
                   <div class="flex flex-col items-center">
                      <div
-                     class="h-16 w-16 flex justify-center items-center bg-white rounded-lg p-2 font-bold text-[#404040] text-2xl"
+                        class="h-16 w-16 flex justify-center items-center bg-white rounded-lg p-2 font-bold text-[#404040] text-2xl"
                         id='minutes'></div>
                      <div class='text-xs mt-3 text-white'>Minutos</div>
                   </div>
                   <div class="flex flex-col items-center">
                      <div
-                     class="h-16 w-16 flex justify-center items-center bg-white rounded-lg p-2 font-bold text-[#404040] text-2xl"
+                        class="h-16 w-16 flex justify-center items-center bg-white rounded-lg p-2 font-bold text-[#404040] text-2xl"
                         id='seconds'></div>
                      <div class='text-xs mt-3 text-white'>Segundos</div>
                   </div>
                </div>
             </div>
 
+
             <!-- <button class="py-2 px-8 rounded-lg bg-[#5F7752] text-white" type="submit">Agendar</button> -->
             <a href="https://www.google.com/calendar/event?action=TEMPLATE&text=Casamiento%20Fede%26Fede%20💒👉🏼🥳&dates=20240309/20240310&details=Nos%20casamos!%20y%20s%C3%AD,%20obviamente%20que%20est%C3%A1s%20invitado.%0A%0AA%20tener%20en%20cuenta%20%F0%9F%95%9C%F0%9F%91%87%F0%9F%8F%BC%0A%F0%9F%92%92El%20%C2%A1S%C3%AD!%20de%20la%20iglesia%20lo%20damos%20a%20las%2011%20a.m%0A%F0%9F%A5%82El%20brindis%20empieza%20a%20las%2013%20p.m%20en%20la%20finca%20AMproS%0A%F0%9F%8E%89%20La%20fiesta%20depende%20de%20ustedes,%20así%20que%20vayan%20con%20zapatos%20c%C3%B3modos%20para%20darlo%20todo.%0A%0ALos%20queremos%20%F0%9F%92%9C%0AF%26F
-               &location=AMProS%20Finca,%20C.%20Pescara,%20Cruz%20de%20Piedra,%20Mendoza,%20Argentina" type="button" class="button py-4 px-12 rounded-lg bg-[#5F7752] text-white text-lg" rel="noopener" target="_blank" >
+               &location=AMProS%20Finca,%20C.%20Pescara,%20Cruz%20de%20Piedra,%20Mendoza,%20Argentina" type="button"
+               class="button py-4 px-12 rounded-lg bg-[#5F7752] text-white text-lg" rel="noopener" target="_blank">
                Agendar
             </a>
          </article>
