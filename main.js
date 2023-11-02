@@ -16,7 +16,6 @@ function redirectionDelay(element, url1, url2, url3) {
    } else{
       setTimeout( ( ) => { window.open( url3, '_blank' ) }, 1000);
    }
-
 }
 
 
