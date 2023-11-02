@@ -124,9 +124,7 @@ body{
   }
 }
 
-.btn,
-.btn:before,
-.btn:after {
+.inner-btn, .btn, .btn:before, .btn:after {
   user-select: none;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important; /* Safari y Chrome */
   -webkit-user-drag: none !important; /* Safari (puede evitar el resaltado al mover elementos) */
