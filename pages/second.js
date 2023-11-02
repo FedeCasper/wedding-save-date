@@ -4,6 +4,7 @@ const $picCircle = document.getElementById('pics-circle')
 const picOne = document.getElementById('first-pic')
 const picTwo = document.getElementById('second-pic')
 const picThree = document.getElementById('third-pic')
+const $agendarBtn = document.getElementById('agendar-btn') 
 
 let toogle = true
 
@@ -51,3 +52,6 @@ function redirectionDelay() {
          window.location.href = url;
    }, 1000);
 }
+
+$agendarBtn.addEventListener('click', redirectionDelay)
+$agendarBtn.addEventListener('touchstart', redirectionDelay)
