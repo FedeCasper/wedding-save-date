@@ -210,7 +210,6 @@ a {
   user-select: none;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important; /* Safari y Chrome */
   -webkit-user-drag: none !important; /* Safari (puede evitar el resaltado al mover elementos) */
-  user-drag: none !important; /* Otros navegadores */
   touch-action: manipulation !important; /* Algunos navegadores más modernos */
 }
 
@@ -228,6 +227,10 @@ a {
   transform: translateX(-50%);
   z-index: -1000;
   background-repeat: no-repeat;
+  user-select: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important; /* Safari y Chrome */
+  -webkit-user-drag: none !important; /* Safari (puede evitar el resaltado al mover elementos) */
+  touch-action: manipulation !important; /* Algunos navegadores más modernos */
 }
 
 .button:hover:before {
