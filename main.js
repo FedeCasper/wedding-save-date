@@ -8,6 +8,7 @@ function annotateFn() {
    annotation.show();
    setTimeout(() => {
       window.location.href = 'https://api.whatsapp.com/send?phone=2616189574';
+      annotation.remove();
    }, 700)
 }
 
