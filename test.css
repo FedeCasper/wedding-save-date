@@ -125,6 +125,7 @@ body{
 
 .main-example .label {
 	font-size: normal;
+  font-weight: bold !important;
 	margin-top: 5px;
 	display: block;
 	position: absolute;
