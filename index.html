@@ -47,15 +47,29 @@
       <main class="h-[65vh] w-full flex flex-col justify-center items-center gap-4 relative group z-30">
 
          <article class="relative w-11/12 flex flex-col justify-center items-center py-6 h-5/6 z-10">
-            <div class="h-[85%] w-80 flex flex-col justify-center items-center gap-2 z-10">
-               <img src="./assets/header-tittle.png" alt="title" class="w-7/12 mb-4">
-               <img src="./assets/names.png" alt="names" class="w-5/6 mb-4">
-               <div class="w-3/6 border-2 border-t-[#C49F5F]"></div>
-               <h3 class="text-center text-[#404040] text-[22px] mt-2">9 de marzo 2024</h3>
+            <div class="h-[85%] w-80 flex flex-col justify-center items-center gap-2 z-10
+               lg:w-6/12">
+               <img 
+                  src="./assets/header-tittle.png"
+                  alt="title"
+                  class="w-7/12 mb-4
+                     lg:mb-12">
+               <img 
+                  src="./assets/names.png" 
+                  alt="names" 
+                  class="w-5/6 mb-4 
+                     lg:w-11/12">
+               <div class="w-3/6 border-2 border-t-[#C49F5F]
+                  lg:w-5/12 lg:mt-6"></div>
+               <h3 class="text-center text-[#404040] text-[22px] mt-2
+                  lg:text-4xl lg:mt-10">
+                  9 de marzo 2024
+               </h3>
             </div>
          </article>
 
-         <section class="absolute bottom-0">
+         <section class="absolute bottom-0 
+            lg:hidden">
             <a href="#" type="button" class="btn button py-4 px-12 text-lg">
                Save the date
             </a>
@@ -64,16 +78,26 @@
       </main>
 
       <!-- Footer -->
-      <footer class="h-[25vh] flex flex-col items-center gap-1 pt-4 z-50 mb-auto">
+      <footer class="h-[25vh] flex flex-col items-center gap-1 pt-4 z-50 mb-auto
+         lg:w-full">
+         
+         <section class="hidden absolute bottom-36 
+            lg:flex">
+            <a href="#" type="button" class="btn button py-4 px-12 text-lg">
+               Save the date
+            </a>
+         </section>
 
-         <div class="btn countdown write-and-countdown p-2 cursor-pointer">
+         <div class="btn countdown write-and-countdown p-2 cursor-pointer
+            lg:absolute lg:bottom-12 lg:left-[75px]">
             <button type="button" class="inner-btn text-md countdown opacity-0
                transition-all delay-50 duration-150 hover:font-semibold hover:text-[#5D7551]">
                Cuenta Regresiva
             </button>
          </div>
 
-         <div class="btn write write-and-countdown p-2 cursor-pointer">
+         <div class="btn write write-and-countdown p-2 cursor-pointer
+            lg:absolute lg:bottom-12 lg:right-[75px]">
             <button type="button" class="inner-btn text-md write opacity-0 
                transition-all delay-50 duration-150 hover:font-semibold hover:text-[#5D7551]">
                Escribinos
