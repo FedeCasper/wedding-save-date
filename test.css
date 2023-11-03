@@ -33,7 +33,6 @@ body{
 }
 .main-example .time {
 	border-radius: 5px;
-	box-shadow: 0 0 10px 0 rgba(0,0,0,0.5);
 	display: inline-block;
 	text-align: center;
 	position: relative;
@@ -65,16 +64,16 @@ body{
 	transform: translate3d(0,0,0);
 }
 .main-example .count {
-	background: #202020;
-	color: #f8f8f8;
+	background: var(--mycream);
+	color: var(--mygray);
 	display: block;
 	font-family: 'Oswald', sans-serif;
-	font-size: 2em;
+	font-size: 4em;
 	line-height: 2.4em;
 	overflow: hidden;
 	position: absolute;
 	text-align: center;
-	text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+	text-shadow: 0 0 0px rgba(0, 0, 0, 0.8);
 	top: 0;
 	width: 100%;
 
@@ -129,6 +128,7 @@ body{
 	position: absolute;
 	top: 95px;
 	width: 100%;
+  color: var(--mycream);
 }
 /* Animation start */
 .main-example .count.curr.top {
@@ -186,7 +186,7 @@ body{
 	width: 48px;
 }
 .main-example .count {
-	font-size: 1.5em;
+	font-size: 2em;
 	line-height: 70px;
 }
 .main-example .label {

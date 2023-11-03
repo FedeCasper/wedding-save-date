@@ -1,5 +1,5 @@
 var labels = ["weeks", "days", "hours", "minutes", "seconds"],
-	TimerCount = new Date().getFullYear() + 1 + "/01/01",
+	TimerCount = "2024/03/04 11:00:00", // Establece la fecha y hora final
 	template = _.template(jQuery("#main-example-template").html()),
 	currDate = "00:00:00:00:00",
 	nextDate = "00:00:00:00:00",
@@ -72,3 +72,9 @@ $example.countdown(TimerCount, function (event) {
 		});
 	}
 });
+
+
+
+
+
+
