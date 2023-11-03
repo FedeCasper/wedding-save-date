@@ -32,8 +32,10 @@ body{
   15%{
     transform: rotate(60deg);
   }
-  45%{
+  16%{
     opacity: 0;
+  }
+  45%{
     transform: rotate(150deg);
   }
   65%{
@@ -41,7 +43,7 @@ body{
   }
   85%{
     transform: rotate(300deg);
-    opacity: 1;
+    visibility: visible;
   }
   100% {
     transform: rotate(360deg);
@@ -122,6 +124,13 @@ body{
   }
 }
 
+.inner-btn, .btn, .btn:before, .btn:after {
+  user-select: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important; /* Safari y Chrome */
+  -webkit-user-drag: none !important; /* Safari (puede evitar el resaltado al mover elementos) */
+  touch-action: manipulation !important; /* Algunos navegadores más modernos */
+}
+
 .countdown {
   animation: text-left-to-right 0.7s ease-in-out forwards;
   animation-delay: 1s;
@@ -131,6 +140,10 @@ body{
   animation: text-right-to-left 0.7s ease-in-out forwards;
   animation-delay: 1.3s;
 }
+
+/* ------------------------------------- */
+/* ------------ Pics Section ------------*/
+/* ------------------------------------- */
 
 @keyframes pic-grow {
   0% {
@@ -143,8 +156,10 @@ body{
 
 .pic1 {
   height: 275px;
-  width: 200px;
-  background-color: antiquewhite;
+  width: 190px;
+  background-image: url('./assets/img-03.png');
+  background-size: contain;
+  background-repeat: no-repeat;
   position: absolute;
   opacity: 0;
   transform: rotate(-15deg);
@@ -152,14 +167,12 @@ body{
   animation: 0.4s ease-in-out 1s forwards pic-grow;
 }
 
-.group:hover .pic1 {
-  transform: translateY(-150px) translateX(-100%) rotate(-15deg);
-}
-
 .pic2 {
   height: 275px;
-  width: 200px;
-  background-color: rgb(215, 250, 242);
+  width: 190px;
+  background-image: url('./assets/img-01.png');
+  background-size: contain;
+  background-repeat: no-repeat;
   position: absolute;
   opacity: 0;
   transform: rotate(0);
@@ -167,14 +180,12 @@ body{
   animation: 0.4s ease-in-out 2s forwards pic-grow;
 }
 
-.group:hover .pic2 {
-  transform: translateY(150px) translateX(100%) rotate(15deg);
-}
-
 .pic3 {
   height: 275px;
-  width: 200px;
-  background-color: rgb(237, 212, 255);
+  width: 190px;
+  background-image: url('./assets/img-02.png');
+  background-size: contain;
+  background-repeat: no-repeat;
   position: absolute;
   opacity: 0;
   transform: rotate(15deg);
@@ -182,13 +193,10 @@ body{
   animation: 0.4s ease-in-out 3s forwards pic-grow;
 }
 
-.group:hover .pic3 {
-  transform: translateY(0) translateX(0);
-}
+/* --------------------------------------- */
+/* ------------ Button Agendar ------------*/
+/* --------------------------------------- */
 
-/* --------------- */
-/* Button Agendar*/
-/* --------------- */
 .button {
   position: relative;
   padding: 8px 25px;
@@ -199,6 +207,9 @@ body{
   background-color: #5D7551 !important;
   transition: all 0.2s ease;
   user-select: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important; /* Safari y Chrome */
+  -webkit-user-drag: none !important; /* Safari (puede evitar el resaltado al mover elementos) */
+  touch-action: manipulation !important; /* Algunos navegadores más modernos */
 }
 
 .button:active {
@@ -215,6 +226,10 @@ body{
   transform: translateX(-50%);
   z-index: -1000;
   background-repeat: no-repeat;
+  user-select: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important; /* Safari y Chrome */
+  -webkit-user-drag: none !important; /* Safari (puede evitar el resaltado al mover elementos) */
+  touch-action: manipulation !important; /* Algunos navegadores más modernos */
 }
 
 .button:hover:before {
@@ -282,4 +297,11 @@ body{
       110% 10%;
     background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
   }
+}
+
+a {
+  user-select: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important; /* Safari y Chrome */
+  -webkit-user-drag: none !important; /* Safari (puede evitar el resaltado al mover elementos) */
+  touch-action: manipulation !important; /* Algunos navegadores más modernos */
 }
