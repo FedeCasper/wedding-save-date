@@ -157,7 +157,7 @@ body{
 .pic1 {
   height: 275px;
   width: 190px;
-  background-image: url('./assets/img-03.png');
+  background-image: url('../assets/img-03.png');
   background-size: contain;
   background-repeat: no-repeat;
   position: absolute;
@@ -170,7 +170,7 @@ body{
 .pic2 {
   height: 275px;
   width: 190px;
-  background-image: url('./assets/img-01.png');
+  background-image: url('../assets/img-01.png');
   background-size: contain;
   background-repeat: no-repeat;
   position: absolute;
@@ -183,7 +183,7 @@ body{
 .pic3 {
   height: 275px;
   width: 190px;
-  background-image: url('./assets/img-02.png');
+  background-image: url('../assets/img-02.png');
   background-size: contain;
   background-repeat: no-repeat;
   position: absolute;

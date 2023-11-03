@@ -11,32 +11,19 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet">
    <script src="https://cdn.tailwindcss.com"></script>
-   <script>
-      tailwind.config = {
-         theme: {
-            extend: {
-               colors: {
-                  myskin: '#EAE8E4',
-                  mygray: '#404040',
-                  mygreen: '#5D7551',
-                  mybrown: '#C49F5F',
-               }
-            }
-         }
-      }
-   </script>
-   <link rel="stylesheet" href="../style.css">
+   <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon">
+   <link rel="stylesheet" href="../styles/style.css">
+   <link rel="stylesheet" href="../styles/countdown.css">
    <title>Countdown</title>
 </head>
 
-<body class=" overflow-hidden">
+<body class="overflow-hidden">
 
-   <section
-      class="h-[100vh] w-full flex flex-col justify-between items-center bg-[url('../assets/background-03.png')] bg-contain bg-repeat relative overflow-hidden">
+   <section class="h-[100vh] w-full flex flex-col justify-between items-center bg-[url('../assets/background.png')] bg-contain bg-repeat relative overflow-hidden">
 
       <!-- Navbar -->
       <nav class="h-[10vh] w-[200px] flex justify-center items-end gap-3 mb-auto">
-         <!-- border-2 border-blue-400 -->
+
          <div class="w-8 h-8 flex justify-center items-center">
             <a href="../index.html" class="disable-slot" title="first-slide"></a>
          </div>
@@ -46,69 +33,41 @@
          <div class="w-8 h-8 flex justify-center items-center">
             <a href="#" class="active-slot" title="third-slide"></a>
          </div>
+
       </nav>
 
       <!-- Main -->
       <main class="h-[70vh] w-[180vw] flex flex-col justify-center items-center gap-4  group z-30">
 
          <!-- Background curve -->
-         <div
-            class="h-[60vh] w-[200vw] absolute bottom-0 bg-[url('../assets/rounded-background-03.png')] bg-contain bg-repeat rounded-tl-full rounded-tr-full">
-         </div>
+         <div class="h-[60vh] w-[200vw] absolute bottom-0 bg-[url('../assets/rounded-background.png')] bg-contain bg-repeat rounded-tl-full rounded-tr-full"></div>
 
          <article id="spinner" class="relative w-full flex flex-col justify-center items-center py-6 h-5/6 z-10">
 
             <section class="h-[15%] relative flex flex-col justify-end items-center gap-2  z-10">
-
-               <img src="../assets/rounded-text-countdown-01.png"
-                  class="spinner-text absolute h-24 w-24 -left-8 -top-8 z-10" alt="" />
-               <div
-                  class="w-fit bg-[url('../assets/background-03.png')] flex flex-col justify-end items-center z-30 py-1 px-2">
+               <img src="../assets/rounded-text-countdown.png" class="spinner-text absolute h-24 w-24 -left-8 -top-8 z-10" alt="Fecha giratoria"/><div
+                  class="w-fit bg-[url('../assets/background.png')] flex flex-col justify-end items-center z-30 py-1 px-2">
                   <div class="bg-white h-12 w-12 rounded-full absolute -top-[10px] -left-[5px] z-30"></div>
-                  <img src="../assets/header-tittle-06.png" alt="title" class="h-[1.2rem] mb-2 relative z-40">
-                  <img src="../assets/names-06.png" alt="names" class="h-[2.2rem] mb-4 relative z-40">
+                  <img src="../assets/header-tittle.png" alt="title" class="h-[1.2rem] mb-2 relative z-40">
+                  <img src="../assets/names.png" alt="names" class="h-[2.2rem] mb-4 relative z-40">
                </div>
-
             </section>
 
             <div class="h-[70%] w-full flex flex-col justify-end items-center gap-2 pb-14 z-10">
                <h2 class="mb-4 text-white text-xl">Faltan...</h2>
-               <div id='countdown' class=" flex justify-around w-1/4 gap-6 ">
-                  <div class="flex flex-col items-center">
-                     <div
-                        class="h-16 w-16 flex justify-center items-center bg-white rounded-lg p-2 font-bold text-[#404040] text-2xl"
-                        id='days'></div>
-                     <div class='text-xs mt-3 text-white'>Días</div>
-                  </div>
-                  <div class="flex flex-col items-center">
-                     <div
-                        class="h-16 w-16 flex justify-center items-center bg-white rounded-lg p-2 font-bold text-[#404040] text-2xl"
-                        id='hours'></div>
-                     <div class='text-xs mt-3 text-white'>Horas</div>
-                  </div>
-                  <div class="flex flex-col items-center">
-                     <div
-                        class="h-16 w-16 flex justify-center items-center bg-white rounded-lg p-2 font-bold text-[#404040] text-2xl"
-                        id='minutes'></div>
-                     <div class='text-xs mt-3 text-white'>Minutos</div>
-                  </div>
-                  <div class="flex flex-col items-center">
-                     <div
-                        class="h-16 w-16 flex justify-center items-center bg-white rounded-lg p-2 font-bold text-[#404040] text-2xl"
-                        id='seconds'></div>
-                     <div class='text-xs mt-3 text-white'>Segundos</div>
-                  </div>
+               <!-- Cuenta refresiva -->
+               <div class="main-example">
+                  <div class="countdown-container" data-timer="2024/03/09" id="main-example"></div>
                </div>
             </div>
 
-
-            <!-- <button class="py-2 px-8 rounded-lg bg-[#5F7752] text-white" type="submit">Agendar</button> -->
             <button 
                id="agendar-btn"
                type="button"
                class="button py-4 px-12 rounded-lg bg-[#5F7752] text-white text-lg">
                Agendar
             </button>
+
          </article>
 
       </main>
@@ -118,8 +77,21 @@
 
    </section>
 
-   <script src="./third.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.countdown/2.2.0/jquery.countdown.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+   <script type="text/template" id="main-example-template">
+      <div class="time <%= label %>">
+         <span class="count curr top"><%= curr %></span>
+         <span class="count next top"><%= next %></span>
+         <span class="count next bottom"><%= next %></span>
+         <span class="count curr bottom"><%= curr %></span>
+         <span class="label"><%= label.length < 6 ? label : label.substr(0, 3)  %></span>
+      </div>
+   </script>
+   <script src="../scripts/countdown.js"></script>
+   <script src="../scripts/third.js"></script>
 
 </body>
-
 </html>
