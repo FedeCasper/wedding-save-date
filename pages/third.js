@@ -1,6 +1,6 @@
 const $agendarBtn = document.getElementById('agendar-btn') 
 function countdown() {
-   const targetDate = new Date('2024-03-10 17:00:00').getTime();
+   const targetDate = new Date('2024-03-09 17:00:00').getTime();
    const now = new Date().getTime();
    const timeLeft = (targetDate - now)
 
