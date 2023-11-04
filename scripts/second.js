@@ -10,6 +10,9 @@ let url_2 = './third.html'
 let url_3 = 'https://api.whatsapp.com/send?phone=2616189574'
 let toogle = true
 
+const anchoViewport = window.innerWidth;
+console.log('Ancho del viewport:', anchoViewport);
+
 $picContainer.addEventListener('touchstart', () => {
    if(toogle){
       toogle = false
@@ -23,8 +26,15 @@ $picContainer.addEventListener('touchstart', () => {
 })
 
 $picContainer.addEventListener('mouseenter', () => {
+   if(window.innerWidth >= 1024){
+      console.log("grande");
+      picOne.style.transform = 'translateY(-250px) translateX(-100%) rotate(-15deg)';
+      picThree.style.transform = 'translateY(250px) translateX(100%) rotate(-15deg)';
+   }else{
+      console.log("chico");
       picOne.style.transform = 'translateY(-150px) translateX(-75%) rotate(15deg)';
       picThree.style.transform = 'translateY(150px) translateX(75%) rotate(-15deg)';
+   }
 })
 
 $picContainer.addEventListener('mouseleave', () => {
