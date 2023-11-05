@@ -19,14 +19,19 @@
 
 <body class="overflow-hidden">
 
-   <section class="h-[100vh] w-full flex flex-col justify-between items-center bg-[url('../assets/background.png')] bg-contain bg-repeat relative overflow-hidden">
+   <section class="relative h-[100vh] w-full flex flex-col justify-between items-center bg-[url('../assets/background.png')] bg-contain bg-repeat overflow-hidden">
 
       <!-- Spinner text and circle -->
       <img src="../assets/rounded-text.png" alt="Frase giratoria"
       class="spinner-text absolute top-[50px] -left-[75px] h-[150px] w-[150px] hidden
          lg:top-[50px] lg:left-[75px] lg:flex">
+
+      <div id="first-pic" class="pic1 -top-64 -right-4 z-10"></div>
+      <div id="second-pic" class="pic2 bottom-56 -left-32 rotate-12 z-10"></div>
+      <div id="third-pic" class="pic3 -bottom-44 -right-20 z-10"></div>
+
       <!-- Navbar -->
-      <nav class="relative h-[10vh] w-full flex justify-center items-center gap-3
+      <nav class="relative h-[10vh] w-full flex justify-center items-center gap-3 z-50
          lg:items-end">
 
          <section class="h-12 w-fit flex justify-center items-center col-start-2 col-end-2">
@@ -41,7 +46,7 @@
             </div>
          </section>
          <button type="button" title="Regalo"
-            class="absolute h-12 w-12 right-0 bg-[url('../assets/icon-close.png')] me-8 bg-contain unselectable
+            class="absolute h-12 w-12 right-0 bg-[url('../assets/icon-close.png')] me-8 bg-contain unselectable z-30
                active:bg-[url('../assets/icon-open.png')]
                lg:me-[75px]">
          </button>
@@ -63,7 +68,10 @@
             </section>
 
             <div class="h-[70%] w-full flex flex-col justify-end items-center gap-2 pb-14 z-10">
-               <h2 class="mb-4 text-white text-xl">Faltan...</h2>
+               <h2 class="mb-4 text-white text-xl
+                  lg:text-3xl lg:mb-8">
+                  Faltan...
+               </h2>
                <!-- Cuenta refresiva -->
                <div class="main-example">
                   <div class="countdown-container" data-timer="2024/03/09" id="main-example"></div>
