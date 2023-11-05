@@ -179,6 +179,17 @@ body{
   animation: cirle-rotation 2s ease-in-out;
 }
 
+.modal{
+  height: 70vh;
+  width: 70vw;
+  background-color: var(--mycream);
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  z-index: 100;
+  visibility: hidden;
+}
+
 .inner-btn, .btn, .btn:before, .btn:after {
   user-select: none;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important; /* Safari y Chrome */

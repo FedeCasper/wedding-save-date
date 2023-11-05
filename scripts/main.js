@@ -1,4 +1,6 @@
 const $buttons = document.querySelectorAll('.btn');
+const $btnModal = document.querySelector('button[title="Regalo"]');
+const $modal = document.querySelector('.modal');
 
 let url_1 = './pages/second.html'
 let url_2 = './pages/third.html'
@@ -7,6 +9,11 @@ let url_3 = 'https://api.whatsapp.com/send?phone=2616189574'
 $buttons.forEach( button => {
    button.addEventListener('click', ()=>{ redirectionDelay(button, url_1, url_2, url_3) } );
 })
+
+$btnModal.addEventListener('click', ()=>{
+   $modal.classList.remove('hidden');
+   $modal.style.visibility = 'visible';
+});
 
 function redirectionDelay(element, url1, url2, url3) {
    if(element.outerText == 'Save the date'){
