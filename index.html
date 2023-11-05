@@ -27,10 +27,10 @@
             lg:top-[50px] lg:left-[75px]">
 
       <!-- Navbar -->
-      <nav class="h-[10vh] w-full grid gap-4 grid-cols-3 grid-row-1 justify-center items-end gap-3 
-         lg:self-end lg:justify-end lg:me-[75px]">
+      <nav class="relative h-[10vh] w-full flex justify-center items-center gap-3
+         lg:items-end">
 
-         <section class="h-12 flex justify-center items-center col-start-2 col-end-2">
+         <section class="h-12 w-fit flex justify-center items-center col-start-2 col-end-2">
             <div class="w-8 h-8 flex justify-center items-center">
                <a href="#" class="active-slot" title="first-slide"></a>
             </div>
@@ -42,8 +42,9 @@
             </div>
          </section>
          <button type="button" title="Regalo"
-            class="bg-[url('./assets/icon-close.png')] bg-contain h-12 w-12 place-self-end me-8 unselectable
-               active:bg-[url('./assets/icon-open.png')]">
+            class="absolute h-12 w-12 right-0 bg-[url('./assets/icon-close.png')] me-8 bg-contain unselectable
+               active:bg-[url('./assets/icon-open.png')]
+               lg:me-[75px]">
          </button>
 
       </nav>
