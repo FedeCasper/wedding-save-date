@@ -154,9 +154,10 @@ body{
 }
 
 .pic1 {
-  height: 304px;
+  height: 35vh;
   width: 210px;
   background-image: url('../assets/img-03.png');
+  background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
   position: absolute;
@@ -167,9 +168,10 @@ body{
 }
 
 .pic2 {
-  height: 304px;
+  height: 35vh;
   width: 210px;
   background-image: url('../assets/img-01.png');
+  background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
   position: absolute;
@@ -180,9 +182,10 @@ body{
 }
 
 .pic3 {
-  height: 304px;
+  height: 35vh;
   width: 210px;
   background-image: url('../assets/img-02.png');
+  background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
   position: absolute;
