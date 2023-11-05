@@ -15,6 +15,10 @@ body{
   background-color: var(--mycream);
 }
 
+/* ----------------------------------- */
+/* ------------ Animations ------------*/
+/* ----------------------------------- */
+
 @keyframes text-rotation {
   from {
     transform: rotate(0deg);
@@ -49,34 +53,6 @@ body{
   }
 }
 
-.spinner-text {
-  transform-origin: 50% 50%;
-  /*linear infinte running*/
-  animation: text-rotation 10s linear infinite;
-}
-
-.active-slot {
-  border: 3px solid #5d7551;
-  height: 16px;
-  width: 16px;
-  background-color: white;
-  border-radius: 50%;
-}
-
-.disable-slot {
-  height: 12px;
-  width: 12px;
-  background-color: #c49f5f;
-  border-radius: 50%;
-}
-
-.disable-slot:hover{
-  border: 3px solid #5d7551;
-  height: 13px;
-  width: 13px;
-  border-radius: 50%;
-}
-
 @keyframes cirle-rotation {
   0% {
     transform: rotate(-45deg);
@@ -89,10 +65,6 @@ body{
     transform: rotate(0);
     opacity: 1;
   }
-}
-
-.circle {
-  animation: cirle-rotation 2s ease-in-out;
 }
 
 @keyframes text-left-to-right {
@@ -123,6 +95,90 @@ body{
   }
 }
 
+@keyframes pic-grow {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes greentopBubbles {
+  0% {
+    background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%,
+      40% 90%, 55% 90%, 70% 90%;
+  }
+
+  50% {
+    background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%,
+      50% 50%, 65% 20%, 90% 30%;
+  }
+
+  100% {
+    background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%,
+      50% 40%, 65% 10%, 90% 20%;
+    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+  }
+}
+
+@keyframes greenbottomBubbles {
+  0% {
+    background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%,
+      70% -10%, 70% 0%;
+  }
+
+  50% {
+    background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%,
+      105% 0%;
+  }
+
+  100% {
+    background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%,
+      110% 10%;
+    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+  }
+}
+
+.unselectable{
+  user-select: none !important;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important; /* Safari y Chrome */
+  -webkit-user-drag: none !important; /* Safari (puede evitar el resaltado al mover elementos) */
+  touch-action: manipulation !important; /* Algunos navegadores más modernos */
+}
+
+.spinner-text {
+  transform-origin: 50% 50%;
+  /*linear infinte running*/
+  animation: text-rotation 10s linear infinite;
+}
+
+.active-slot {
+  border: 3px solid #5d7551;
+  height: 16px;
+  width: 16px;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.disable-slot {
+  height: 12px;
+  width: 12px;
+  background-color: #c49f5f;
+  border-radius: 50%;
+}
+
+.disable-slot:hover{
+  border: 3px solid #5d7551;
+  height: 13px;
+  width: 13px;
+  border-radius: 50%;
+}
+
+.circle {
+  animation: cirle-rotation 2s ease-in-out;
+}
+
 .inner-btn, .btn, .btn:before, .btn:after {
   user-select: none;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important; /* Safari y Chrome */
@@ -143,15 +199,6 @@ body{
 /* ------------------------------------- */
 /* ------------ Pics Section ------------*/
 /* ------------------------------------- */
-
-@keyframes pic-grow {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 
 .pic1 {
   height: 35vh;
@@ -251,24 +298,6 @@ body{
   animation: greentopBubbles 0.6s ease;
 }
 
-@keyframes greentopBubbles {
-  0% {
-    background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%,
-      40% 90%, 55% 90%, 70% 90%;
-  }
-
-  50% {
-    background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%,
-      50% 50%, 65% 20%, 90% 30%;
-  }
-
-  100% {
-    background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%,
-      50% 40%, 65% 10%, 90% 20%;
-    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
-  }
-}
-
 .button:hover::after {
   bottom: -70%;
   background-image: radial-gradient(circle, var(--mygreen) 20%, transparent 20%),
@@ -281,24 +310,6 @@ body{
   background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 20% 20%, 18% 18%;
   background-position: 50% 0%;
   animation: greenbottomBubbles 0.6s ease;
-}
-
-@keyframes greenbottomBubbles {
-  0% {
-    background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%,
-      70% -10%, 70% 0%;
-  }
-
-  50% {
-    background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%,
-      105% 0%;
-  }
-
-  100% {
-    background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%,
-      110% 10%;
-    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
-  }
 }
 
 a {
