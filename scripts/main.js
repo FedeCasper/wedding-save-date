@@ -1,6 +1,10 @@
 const $buttons = document.querySelectorAll('.btn');
 const $btnModal = document.querySelector('button[title="Regalo"]');
+console.log($btnModal);
+const $modalContainer = document.querySelector('.modal-container');
+console.log($modalContainer);
 const $modal = document.querySelector('.modal');
+console.log($modal);
 
 let url_1 = './pages/second.html'
 let url_2 = './pages/third.html'
@@ -10,8 +14,10 @@ $buttons.forEach( button => {
    button.addEventListener('click', ()=>{ redirectionDelay(button, url_1, url_2, url_3) } );
 })
 
-$btnModal.addEventListener('click', ()=>{
-   $modal.classList.toggle('visible');
+$btnModal.addEventListener('click', () => {
+   $modal.style.display = $modal.style.display === 'none' || $modal.style.display === '' ? 'block' : 'none';
+   $modalContainer.style.display = $modalContainer.style.display === 'none' || $modalContainer.style.display === '' ? 'block' : 'none';
+   $modalContainer.classList.toggle('backdrop-blur-md');
 });
 
 function redirectionDelay(element, url1, url2, url3) {

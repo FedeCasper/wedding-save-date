@@ -179,14 +179,35 @@ body{
   animation: cirle-rotation 2s ease-in-out;
 }
 
+.modal-container{
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  background-color: rgba(89, 89, 89, 0.5);
+  pointer-events: none;
+  z-index: 100;
+  display: none;
+}
+
 .modal{
-  height: 80vh;
-  width: 90vw;
+  height: 90%;
+  width: 90%;
   position: fixed;
+  z-index: 150;
   inset: 0;
   margin: auto;
+  border-radius: 10px;
+  background-image: url('../assets/modal.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: none;
+}
+
+.section-blur {
+  backdrop-filter: blur(5px); /* Ajusta el valor de desenfoque según tus preferencias */
+  pointer-events: none;
   z-index: 100;
-  visibility: hidden;
 }
 
 .inner-btn, .btn, .btn:before, .btn:after {
