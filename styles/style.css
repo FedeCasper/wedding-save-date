@@ -181,8 +181,8 @@ body{
 
 .modal{
   height: 80vh;
-  width: 80vw;
-  position: absolute;
+  width: 90vw;
+  position: fixed;
   inset: 0;
   margin: auto;
   z-index: 100;
