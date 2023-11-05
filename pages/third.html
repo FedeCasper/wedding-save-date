@@ -21,8 +21,14 @@
 
    <section class="h-[100vh] w-full flex flex-col justify-between items-center bg-[url('../assets/background.png')] bg-contain bg-repeat relative overflow-hidden">
 
+      <!-- Spinner text and circle -->
+      <img src="../assets/rounded-text.png" alt="Frase giratoria"
+      class="spinner-text absolute top-[50px] -left-[75px] h-[150px] w-[150px] hidden
+         lg:top-[50px] lg:left-[75px] lg:flex">
+
       <!-- Navbar -->
-      <nav class="h-[10vh] w-[200px] flex justify-center items-end gap-3 mb-auto">
+      <nav class="h-[10vh] w-[200px] flex justify-center items-end gap-3 mb-auto
+         lg:self-end lg:justify-end lg:me-[75px]">
 
          <div class="w-8 h-8 flex justify-center items-center">
             <a href="../index.html" class="disable-slot" title="first-slide"></a>
@@ -39,8 +45,7 @@
       <!-- Main -->
       <main class="h-[70vh] w-[180vw] flex flex-col justify-center items-center gap-4  group z-30">
 
-         <!-- Background curve -->
-         <div class="h-[60vh] w-[200vw] absolute bottom-0 bg-[url('../assets/rounded-background.png')] bg-contain bg-repeat rounded-tl-full rounded-tr-full"></div>
+
 
          <article id="spinner" class="relative w-full flex flex-col justify-center items-center py-6 h-5/6 z-10">
 
@@ -73,7 +78,14 @@
       </main>
 
       <!-- Footer -->
-      <footer class="h-[15vh]"></footer>
+      <footer class="h-[15vh] w-full flex justify-center">
+         <!-- Background curve -->
+         <div class="h-[65vh] w-[150vw] absolute bottom-0 bg-[url('../assets/rounded-background.png')] bg-contain bg-repeat rounded-tl-full rounded-tr-full
+               md:w-[120vw] lg:w-[90vw]
+            ">
+            <!-- md:w-[1200px] md:h-[1200px] md:-bottom-[65%] lg:w-[130vh] lg:h-[130vh] lg:-bottom-[70%] -->
+         </div>
+      </footer>
 
    </section>
 
