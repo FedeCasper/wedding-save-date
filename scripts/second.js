@@ -15,13 +15,14 @@ console.log('Ancho del viewport:', anchoViewport);
 
 $picContainer.addEventListener('touchstart', () => {
    if(toogle){
+      toogle = false
       picOne.style.transform = 'translateY(-150px) translateX(-75%) rotate(15deg)';
       picThree.style.transform = 'translateY(150px) translateX(75%) rotate(-15deg)';
    }else{
+      toogle = true
       picOne.style.transform = 'translateY(0) rotate(-15deg)'; 
       picThree.style.transform = 'translateY(0) rotate(15deg)'; 
    }
-   toogle = true
 })
 
 $picContainer.addEventListener('mouseenter', () => {
