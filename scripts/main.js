@@ -11,8 +11,7 @@ $buttons.forEach( button => {
 })
 
 $btnModal.addEventListener('click', ()=>{
-   $modal.classList.remove('hidden');
-   $modal.style.visibility = 'visible';
+   $modal.classList.toggle('visible');
 });
 
 function redirectionDelay(element, url1, url2, url3) {
