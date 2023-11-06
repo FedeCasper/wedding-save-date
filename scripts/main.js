@@ -24,28 +24,25 @@ function redirectionDelay(element, url1, url2, url3) {
    }
 }
 
-
+function toogleModal(modalElement, modalContainerElement, lockableElementsList) {
+   modalElement.style.display = $modal.style.display === 'none' || $modal.style.display === '' ? 'block' : 'none';
+   $modalContainer.style.display = $modalContainer.style.display === 'none' || $modalContainer.style.display === '' ? 'block' : 'none';
+   modalContainerElement.classList.toggle('backdrop-blur-md');
+   lockableElementsList.forEach( element => {
+      element.style.display === 'none' ? element.style.display = 'block' : element.style.display = 'none';
+   })
+}
 
 $buttons.forEach( button => {
    button.addEventListener('click', ()=>{ redirectionDelay(button, url_1, url_2, url_3) } );
 })
 
 $btnModal.addEventListener('click', () => {
-   $modal.style.display = $modal.style.display === 'none' || $modal.style.display === '' ? 'block' : 'none';
-   $modalContainer.style.display = $modalContainer.style.display === 'none' || $modalContainer.style.display === '' ? 'block' : 'none';
-   $modalContainer.classList.toggle('backdrop-blur-md');
-   $lockablesElements.forEach( element => {
-      element.style.display = 'none'
-   })
+   toogleModal($modal, $modalContainer, $lockablesElements);
 });
 
 $btnClose.addEventListener('click', () => {
-   $modal.style.display = $modal.style.display === 'none' || $modal.style.display === '' ? 'block' : 'none';
-   $modalContainer.style.display = $modalContainer.style.display === 'none' || $modalContainer.style.display === '' ? 'block' : 'none';
-   $modalContainer.classList.toggle('backdrop-blur-md');
-   $lockablesElements.forEach( element => {
-      element.style.display = 'block'
-   })
+   toogleModal($modal, $modalContainer, $lockablesElements);
 })
 
 
