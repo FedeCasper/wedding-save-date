@@ -1,14 +1,9 @@
-const $lockablesElements = document.querySelectorAll('.lockable');
-console.log($lockablesElements);
 const $buttons = document.querySelectorAll('.btn');
 const $btnModal = document.querySelector('button[title="Regalo"]');
-console.log($btnModal);
 const $modalContainer = document.querySelector('.modal-container');
-console.log($modalContainer);
 const $modal = document.querySelector('.modal');
-console.log($modal);
+const $lockablesElements = document.querySelectorAll('.lockable');
 const $btnClose = document.getElementById('close')
-console.log($btnClose);
 
 let url_1 = './pages/second.html'
 let url_2 = './pages/third.html'
@@ -25,8 +20,8 @@ function redirectionDelay(element, url1, url2, url3) {
 }
 
 function toogleModal(modalElement, modalContainerElement, lockableElementsList) {
-   modalElement.style.display = $modal.style.display === 'none' || $modal.style.display === '' ? 'block' : 'none';
-   $modalContainer.style.display = $modalContainer.style.display === 'none' || $modalContainer.style.display === '' ? 'block' : 'none';
+   modalElement.style.display = modalElement.style.display === 'none' || modalElement.style.display === '' ? 'block' : 'none';
+   modalContainerElement.style.display = modalContainerElement.style.display === 'none' || modalContainerElement.style.display === '' ? 'block' : 'none';
    modalContainerElement.classList.toggle('backdrop-blur-md');
    lockableElementsList.forEach( element => {
       element.style.display === 'none' ? element.style.display = 'block' : element.style.display = 'none';
