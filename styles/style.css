@@ -179,37 +179,6 @@ body{
   animation: cirle-rotation 2s ease-in-out;
 }
 
-.modal-container{
-  height: 100vh;
-  width: 100vw;
-  position: absolute;
-  background-color: rgba(89, 89, 89, 0.5);
-  pointer-events: none;
-  z-index: 100;
-  display: none;
-}
-
-.modal{
-  height: 90%;
-  width: 90%;
-  position: fixed;
-  z-index: 150;
-  inset: 0;
-  margin: auto;
-  border-radius: 10px;
-  background-image: url('../assets/modal.png');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: none;
-}
-
-.section-blur {
-  backdrop-filter: blur(5px); /* Ajusta el valor de desenfoque según tus preferencias */
-  pointer-events: none;
-  z-index: 100;
-}
-
 .inner-btn, .btn, .btn:before, .btn:after {
   user-select: none;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important; /* Safari y Chrome */
@@ -225,6 +194,38 @@ body{
 .write {
   animation: text-right-to-left 0.7s ease-in-out forwards;
   animation-delay: 1.3s;
+}
+
+/* -------------------------------------- */
+/* ---------------- Modal ----------------*/
+/* -------------------------------------- */
+
+.modal-container{
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  background-color: rgba(89, 89, 89, 0.5);
+  pointer-events: none;
+  z-index: 100;
+  display: none;
+}
+
+.modal{
+  position: fixed;
+  inset: 0;
+  z-index: 150;
+  height: 90%;
+  width: 90%;
+  margin: auto;
+  border-radius: 10px;
+  background: url('../assets/modal.png') no-repeat center/cover;
+  display: none;
+}
+
+.section-blur {
+  backdrop-filter: blur(5px); 
+  pointer-events: none;
+  z-index: 100;
 }
 
 /* ------------------------------------- */

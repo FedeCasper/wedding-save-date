@@ -42,6 +42,12 @@ $picContainer.addEventListener('mouseleave', () => {
    picThree.style.transform = 'translateY(0) rotate(15deg)'; 
 })
 
+$btnModal.addEventListener('click', () => {
+   $modal.style.display = $modal.style.display === 'none' || $modal.style.display === '' ? 'block' : 'none';
+   $modalContainer.style.display = $modalContainer.style.display === 'none' || $modalContainer.style.display === '' ? 'block' : 'none';
+   $modalContainer.classList.toggle('backdrop-blur-md');
+});
+
 $buttons.forEach( button => {
    button.addEventListener('click', () => { redirectionDelay(button, url_1, url_2, url_3) } );
 })
