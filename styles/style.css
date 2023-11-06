@@ -196,6 +196,22 @@ body{
   animation-delay: 1.3s;
 }
 
+#main-pic{
+  /* border: 1px solid red; */
+  height: 90vh;
+  width: 130%;
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(10deg);
+  z-index: 0;
+  /* transform: rotate(0); */
+  background-image: url('../assets/main-pic.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
 /* -------------------------------------- */
 /* ---------------- Modal ----------------*/
 /* -------------------------------------- */
