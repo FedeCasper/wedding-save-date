@@ -27,17 +27,23 @@ function redirectionDelay(element, url1, url2, url3) {
    }
 }
 
-modalImage.onload = () => {
-   $modal.appendChild(modalImage);
-}
+
 
 function toogleModal(modalElement, modalContainerElement, lockableElementsList) {
-   modalElement.style.display = $modal.style.display === 'none' || $modal.style.display === '' ? 'block' : 'none';
-   $modalContainer.style.display = $modalContainer.style.display === 'none' || $modalContainer.style.display === '' ? 'block' : 'none';
-   modalContainerElement.classList.toggle('backdrop-blur-md');
-   lockableElementsList.forEach( element => {
-      element.style.display === 'none' ? element.style.display = 'block' : element.style.display = 'none';
-   })
+   
+   modalImage.onload = () => {
+      $modal.appendChild(modalImage);
+   }
+
+   setTimeout(() => {
+      modalElement.style.display = $modal.style.display === 'none' || $modal.style.display === '' ? 'block' : 'none';
+      $modalContainer.style.display = $modalContainer.style.display === 'none' || $modalContainer.style.display === '' ? 'block' : 'none';
+      modalContainerElement.classList.toggle('backdrop-blur-md');
+      lockableElementsList.forEach( element => {
+         element.style.display === 'none' ? element.style.display = 'block' : element.style.display = 'none';
+      })
+   }, 500)
+
 }
 
 $buttons.forEach( button => {
