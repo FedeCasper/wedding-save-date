@@ -176,7 +176,7 @@ body{
 }
 
 .header-titles{
-  animation: 0.7s ease-in-out 1s forwards opacity-animation;
+  animation: 1.5s ease-in-out 1s forwards opacity-animation;
 }
 
 .circle {
@@ -215,6 +215,7 @@ body{
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center; */
+  animation: 0.4s ease-in-out 1s forwards opacity-animation;
 }
 
 /* -------------------------------------- */
