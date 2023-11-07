@@ -209,10 +209,12 @@ body{
   left: 50%;
   transform: translate(-50%, -50%) rotate(10deg);
   z-index: 0;
-  background-image: url('../assets/main-pic.png');
+  object-fit: contain;
+  object-position: center;
+  /* background-image: url('../assets/main-pic.png');
   background-repeat: no-repeat;
   background-size: contain;
-  background-position: center;
+  background-position: center; */
 }
 
 /* -------------------------------------- */
