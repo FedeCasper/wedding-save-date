@@ -10,9 +10,6 @@ console.log($modal);
 const $btnClose = document.getElementById('close')
 console.log($btnClose);
 
-const modalImage = new Image();
-modalImage.src = '../assets/modal.png';
-
 let url_1 = './pages/second.html'
 let url_2 = './pages/third.html'
 let url_3 = 'https://api.whatsapp.com/send?phone=2616189574'
@@ -27,23 +24,13 @@ function redirectionDelay(element, url1, url2, url3) {
    }
 }
 
-
-
 function toogleModal(modalElement, modalContainerElement, lockableElementsList) {
-   
-   modalImage.onload = () => {
-      $modal.appendChild(modalImage);
-   }
-
-   setTimeout(() => {
-      modalElement.style.display = $modal.style.display === 'none' || $modal.style.display === '' ? 'block' : 'none';
-      $modalContainer.style.display = $modalContainer.style.display === 'none' || $modalContainer.style.display === '' ? 'block' : 'none';
-      modalContainerElement.classList.toggle('backdrop-blur-md');
-      lockableElementsList.forEach( element => {
-         element.style.display === 'none' ? element.style.display = 'block' : element.style.display = 'none';
-      })
-   }, 500)
-
+   modalElement.style.display = $modal.style.display === 'none' || $modal.style.display === '' ? 'block' : 'none';
+   $modalContainer.style.display = $modalContainer.style.display === 'none' || $modalContainer.style.display === '' ? 'block' : 'none';
+   modalContainerElement.classList.toggle('backdrop-blur-md');
+   lockableElementsList.forEach( element => {
+      element.style.display === 'none' ? element.style.display = 'block' : element.style.display = 'none';
+   })
 }
 
 $buttons.forEach( button => {
