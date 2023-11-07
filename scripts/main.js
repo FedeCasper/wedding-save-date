@@ -10,6 +10,9 @@ console.log($modal);
 const $btnClose = document.getElementById('close')
 console.log($btnClose);
 
+const modalImage = new Image();
+modalImage.src = '../assets/modal.png';
+
 let url_1 = './pages/second.html'
 let url_2 = './pages/third.html'
 let url_3 = 'https://api.whatsapp.com/send?phone=2616189574'
@@ -22,6 +25,10 @@ function redirectionDelay(element, url1, url2, url3) {
    } else{
       setTimeout( ( ) => { window.open( url3, '_blank' ) }, 1000);
    }
+}
+
+modalImage.onload = () => {
+   $modal.appendChild(modalImage);
 }
 
 function toogleModal(modalElement, modalContainerElement, lockableElementsList) {
