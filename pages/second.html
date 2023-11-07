@@ -19,21 +19,36 @@
       <!-- Spinner text and circle -->
       <img src="../assets/rounded-text.png" alt="Frase giratoria"
          class="spinner-text absolute top-[50px] -left-[75px] h-[150px] w-[150px]
-            lg:top-[50px] lg:left-[75px]">
+            lg:top-[50px] lg:left-[50px]">
+
+      <!-- Modal -->
+      <div class="modal-container">
+         <div class="modal">
+            <img id="close" src="../assets/btn-close.png" alt="Boton cerrar" class="absolute top-4 right-4 h-12 w-12 transition-all delay-50 duration-150 hover:cursor-pointer hover:scale-90 hover:drop-shadow-md">
+         </div>
+      </div>
 
       <!-- Navbar -->
-      <nav class="h-[10vh] w-[200px] flex justify-center items-end gap-3 mb-auto
-         lg:self-end lg:justify-end lg:me-[75px]">
+      <nav class="relative h-[10vh] w-full grid gap-2 grid-cols-3 
+         lg:items-end">
 
-         <div class="w-8 h-8 flex justify-center items-center">
-            <a href="../index.html" class="disable-slot" title="first-slide"></a>
-         </div>
-         <div class="w-8 h-8 flex justify-center items-center">
-            <a href="#" class="active-slot" title="second-slide"></a>
-         </div>
-         <div class="w-8 h-8 flex justify-center items-center">
-            <a href="./third.html" class="disable-slot" title="third-slide"></a>
-         </div>
+         <section class="h-12 flex flex-wrap justify-center items-center self-end col-start-2 col-end-2 mt-[35px]">
+            <div class="w-8 h-8 flex justify-center items-center">
+               <a href="../index.html" class="disable-slot" title="first-slide"></a>
+            </div>
+            <div class="w-8 h-8 flex justify-center items-center">
+               <a href="#" class="active-slot" title="second-slide"></a>
+            </div>
+            <div class="w-8 h-8 flex justify-center items-center">
+               <a href="./third.html" class="disable-slot" title="third-slide"></a>
+            </div>
+         </section>
+         <button type="button" title="Regalo"
+            class="h-12 w-12 flex justify-self-end items-center self-end bg-[url('../assets/icon-close.png')] bg-contain unselectable col-start-3 col-end-3 me-[35px] mt-[35px] lockable
+               active:bg-[url('../assets/icon-open.png')]
+               lg:me-[50px] lg:mt-[50px]">
+         </button>
+
       </nav>
 
       <!-- Main -->
@@ -62,10 +77,10 @@
                </section>
 
                <!-- Button -->
-               <section class="absolute bottom-0
+               <section class="absolute -bottom-2 lockable
                   lg:-bottom-14">
                   <button id="agendar-btn" type="button" 
-                     class="btn button py-4 px-12 rounded-lg bg-[#5F7752] text-white text-lg">
+                     class="py-4 px-12 rounded-lg bg-[#5F7752] text-white text-lg btn button unselectable">
                      Agendar
                   </button>
                </section>
@@ -79,7 +94,7 @@
 
          <div class="btn countdown write-and-countdown p-2 cursor-pointer
             lg:absolute lg:bottom-12 lg:left-[75px]">
-            <button type="button" class="inner-btn text-md countdown opacity-0
+            <button type="button" class="inner-btn text-md countdown opacity-0 lockable
                transition-all delay-50 duration-150 hover:font-semibold hover:text-[#5D7551]
                lg:text-lg">
                Cuenta Regresiva
@@ -88,7 +103,7 @@
 
          <div class="btn write write-and-countdown p-2 cursor-pointer
             lg:absolute lg:bottom-12 lg:right-[75px]">
-            <button type="button" class="inner-btn text-md write opacity-0 
+            <button type="button" class="inner-btn text-md write opacity-0 lockable
                transition-all delay-50 duration-150 hover:font-semibold hover:text-[#5D7551]
                lg:text-lg">
                Escribinos

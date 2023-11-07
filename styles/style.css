@@ -15,6 +15,10 @@ body{
   background-color: var(--mycream);
 }
 
+/* ----------------------------------- */
+/* ------------ Animations ------------*/
+/* ----------------------------------- */
+
 @keyframes text-rotation {
   from {
     transform: rotate(0deg);
@@ -49,34 +53,6 @@ body{
   }
 }
 
-.spinner-text {
-  transform-origin: 50% 50%;
-  /*linear infinte running*/
-  animation: text-rotation 10s linear infinite;
-}
-
-.active-slot {
-  border: 3px solid #5d7551;
-  height: 16px;
-  width: 16px;
-  background-color: white;
-  border-radius: 50%;
-}
-
-.disable-slot {
-  height: 12px;
-  width: 12px;
-  background-color: #c49f5f;
-  border-radius: 50%;
-}
-
-.disable-slot:hover{
-  border: 3px solid #5d7551;
-  height: 13px;
-  width: 13px;
-  border-radius: 50%;
-}
-
 @keyframes cirle-rotation {
   0% {
     transform: rotate(-45deg);
@@ -89,10 +65,6 @@ body{
     transform: rotate(0);
     opacity: 1;
   }
-}
-
-.circle {
-  animation: cirle-rotation 2s ease-in-out;
 }
 
 @keyframes text-left-to-right {
@@ -123,6 +95,94 @@ body{
   }
 }
 
+@keyframes opacity-animation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes greentopBubbles {
+  0% {
+    background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%,
+      40% 90%, 55% 90%, 70% 90%;
+  }
+
+  50% {
+    background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%,
+      50% 50%, 65% 20%, 90% 30%;
+  }
+
+  100% {
+    background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%,
+      50% 40%, 65% 10%, 90% 20%;
+    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+  }
+}
+
+@keyframes greenbottomBubbles {
+  0% {
+    background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%,
+      70% -10%, 70% 0%;
+  }
+
+  50% {
+    background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%,
+      105% 0%;
+  }
+
+  100% {
+    background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%,
+      110% 10%;
+    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+  }
+}
+
+.unselectable{
+  user-select: none !important;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important; /* Safari y Chrome */
+  -webkit-user-drag: none !important; /* Safari (puede evitar el resaltado al mover elementos) */
+  touch-action: manipulation !important; /* Algunos navegadores más modernos */
+}
+
+.spinner-text {
+  transform-origin: 50% 50%;
+  /*linear infinte running*/
+  animation: text-rotation 10s linear infinite;
+}
+
+.active-slot {
+  border: 3px solid #5d7551;
+  height: 16px;
+  width: 16px;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.disable-slot {
+  height: 12px;
+  width: 12px;
+  background-color: #c49f5f;
+  border-radius: 50%;
+}
+
+.disable-slot:hover{
+  border: 3px solid #5d7551;
+  height: 13px;
+  width: 13px;
+  border-radius: 50%;
+}
+
+.header-titles{
+  animation: 1.5s ease-in-out 1s forwards opacity-animation;
+}
+
+.circle {
+  animation: cirle-rotation 2s ease-in-out;
+}
+
 .inner-btn, .btn, .btn:before, .btn:after {
   user-select: none;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important; /* Safari y Chrome */
@@ -140,18 +200,58 @@ body{
   animation-delay: 1.3s;
 }
 
+#main-pic{
+  /* border: 1px solid red; */
+  height: 90vh;
+  width: 130%;
+  position: absolute;
+  top: 52%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(10deg);
+  z-index: 0;
+  object-fit: contain;
+  object-position: center;
+  background-image: url('../assets/main-pic.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  animation: 0.4s ease-in-out 1s forwards opacity-animation;
+}
+
+/* -------------------------------------- */
+/* ---------------- Modal ----------------*/
+/* -------------------------------------- */
+
+.modal-container{
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  background-color: rgba(89, 89, 89, 0.5);
+  z-index: 60;
+  display: none;
+}
+
+.modal{
+  position: fixed;
+  inset: 0;
+  z-index: 70;
+  height: 80%;
+  width: 90%;
+  margin: auto;
+  border-radius: 10px;
+  background: url('../assets/modal.png') no-repeat center/cover;
+  display: none;
+}
+
+.section-blur {
+  backdrop-filter: blur(5px); 
+  pointer-events: none;
+  z-index: 100;
+}
+
 /* ------------------------------------- */
 /* ------------ Pics Section ------------*/
 /* ------------------------------------- */
-
-@keyframes pic-grow {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 
 .pic1 {
   height: 35vh;
@@ -164,7 +264,7 @@ body{
   opacity: 0;
   transform: rotate(-15deg);
   transition: all 1s ease-in-out;
-  animation: 0.4s ease-in-out 1s forwards pic-grow;
+  animation: 0.4s ease-in-out 1s forwards opacity-animation;
 }
 
 .pic2 {
@@ -178,7 +278,7 @@ body{
   opacity: 0;
   transform: rotate(0);
   transition: all 1s ease-in-out;
-  animation: 0.4s ease-in-out 2s forwards pic-grow;
+  animation: 0.4s ease-in-out 2s forwards opacity-animation;
 }
 
 .pic3 {
@@ -192,7 +292,7 @@ body{
   opacity: 0;
   transform: rotate(15deg);
   transition: all 1s ease-in-out;
-  animation: 0.4s ease-in-out 3s forwards pic-grow;
+  animation: 0.4s ease-in-out 3s forwards opacity-animation;
 }
 
 /* --------------------------------------- */
@@ -228,10 +328,6 @@ body{
   transform: translateX(-50%);
   z-index: -1000;
   background-repeat: no-repeat;
-  user-select: none;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important; /* Safari y Chrome */
-  -webkit-user-drag: none !important; /* Safari (puede evitar el resaltado al mover elementos) */
-  touch-action: manipulation !important; /* Algunos navegadores más modernos */
 }
 
 .button:hover:before {
@@ -251,24 +347,6 @@ body{
   animation: greentopBubbles 0.6s ease;
 }
 
-@keyframes greentopBubbles {
-  0% {
-    background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%,
-      40% 90%, 55% 90%, 70% 90%;
-  }
-
-  50% {
-    background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%,
-      50% 50%, 65% 20%, 90% 30%;
-  }
-
-  100% {
-    background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%,
-      50% 40%, 65% 10%, 90% 20%;
-    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
-  }
-}
-
 .button:hover::after {
   bottom: -70%;
   background-image: radial-gradient(circle, var(--mygreen) 20%, transparent 20%),
@@ -281,24 +359,6 @@ body{
   background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 20% 20%, 18% 18%;
   background-position: 50% 0%;
   animation: greenbottomBubbles 0.6s ease;
-}
-
-@keyframes greenbottomBubbles {
-  0% {
-    background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%,
-      70% -10%, 70% 0%;
-  }
-
-  50% {
-    background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%,
-      105% 0%;
-  }
-
-  100% {
-    background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%,
-      110% 10%;
-    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
-  }
 }
 
 a {
@@ -326,5 +386,16 @@ a {
   .pic3 {
     height: 390px;
     width: 270px;
+  }
+  .modal{
+    position: fixed;
+    inset: 0;
+    z-index: 70;
+    height: 90%;
+    width: 90%;
+    margin: auto;
+    border-radius: 10px;
+    background: url('../assets/modal-web.png') no-repeat center/cover;
+    display: none;
   }
 }

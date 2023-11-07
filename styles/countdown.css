@@ -70,7 +70,7 @@ body{
 	background: var(--mycream);
 	color: var(--mygray);
 	display: block;
-  font-weight: bold;
+  	font-weight: bold;
 	font-size: 4em;
 	line-height: 2.4em;
 	overflow: hidden;

@@ -18,42 +18,57 @@
 
 <body>
 
-   <section class="h-[100vh] flex flex-col justify-between items-center bg-[url('./assets/mobile-background-3.png')] bg-cover bg-no-repeat bg-center 
-      sm:bg-[url('./assets/mobile-background-3.png')] sm:bg-left-bottom">
+   <section class="relative x h-[100vh] w-[100vw] flex flex-col justify-between items-center overflow-hidden">
 
       <!-- Spinner text and circle -->
-      <img src="./assets/rounded-text-mobile.png" alt="Frase giratoria"
-         class="spinner-text absolute top-[50px] -left-[75px] h-[150px] w-[150px]
-            lg:top-[50px] lg:left-[75px]">
+      <div alt="Frase giratoria"
+         class="bg-[url('./assets/rounded-text-mobile.png')] bg-contain absolute h-[150px] w-[150px] top-[50px] -left-[75px] z-50 spinner-text
+            sm:bg-[url('./assets/rounded-text.png')]
+            lg:top-[50px] lg:left-[50px]">
+      </div>
+
+      <!-- Modal -->
+      <div class="modal-container">
+         <div class="modal">
+            <img id="close" src="./assets/btn-close.png" alt="Boton cerrar" class="absolute top-4 right-4 h-12 w-12 transition-all delay-50 duration-150 hover:cursor-pointer hover:scale-90 hover:drop-shadow-md">
+         </div>
+      </div>
+
+      <!-- Background picture -->
+      <div id="main-pic"></div>
 
       <!-- Navbar -->
-      <nav class="h-[10vh] w-[200px] flex justify-center items-end gap-3
-         lg:self-end lg:justify-end lg:me-[75px]">
+      <nav class="relative h-[10vh] w-full grid gap-2 grid-cols-3 
+         lg:items-end">
 
-         <div class="w-8 h-8 flex justify-center items-center">
-            <a href="#" class="active-slot" title="first-slide"></a>
-         </div>
-         <div class="w-8 h-8 flex justify-center items-center">
-            <a href="./pages/second.html" class="disable-slot" title="second-slide"></a>
-         </div>
-         <div class="w-8 h-8 flex justify-center items-center">
-            <a href="./pages/third.html" class="disable-slot" title="third-slide"></a>
-         </div>
+         <section class="h-12 flex flex-wrap justify-center items-center self-end col-start-2 col-end-2 mt-[35px]">
+            <div class="w-8 h-8 flex justify-center items-center">
+               <a href="#" class="active-slot" title="first-slide"></a>
+            </div>
+            <div class="w-8 h-8 flex justify-center items-center">
+               <a href="./pages/second.html" class="disable-slot" title="second-slide"></a>
+            </div>
+            <div class="w-8 h-8 flex justify-center items-center">
+               <a href="./pages/third.html" class="disable-slot" title="third-slide"></a>
+            </div>
+         </section>
+         <button type="button" title="Regalo"
+            class="h-12 w-12 flex justify-self-end items-center self-end bg-[url('./assets/icon-close.png')] bg-contain unselectable col-start-3 col-end-3 me-[35px] mt-[35px] lockable
+               active:bg-[url('./assets/icon-open.png')]
+               lg:me-[50px] lg:mt-[50px]">
+         </button>
 
       </nav>
 
       <!-- Main -->
       <main class="h-[65vh] w-full flex flex-col justify-center items-center gap-4 relative group z-30">
 
-         <article class="relative w-11/12 flex flex-col justify-center items-center py-6 h-5/6 z-10">
+         <article class="relative w-11/12 flex flex-col justify-center items-center py-6 h-5/6 z-10 opacity-0 header-titles">
             <div class="h-[85%] w-80 flex flex-col justify-center items-center gap-2 z-10
                lg:w-5/12">
                <img src="./assets/header-tittle-mobile.png" alt="title"
                   class="w-7/12 mb-4 drop-shadow-[4px_4px_5px_#404040]
                      lg:mb-12">
-               <!-- <img src="./assets/header-tittle.png" alt="title"
-               class="w-7/12 mb-4 hidden
-                  lg:mb-12 sm:flex"> -->
                <img src="./assets/names.png" alt="names" 
                   class="w-5/6 mb-4 drop-shadow-[4px_4px_5px_#404040]
                      lg:w-11/12">
@@ -69,7 +84,7 @@
          <!-- Button -->
          <section class="absolute bottom-0 
             lg:hidden">
-            <a href="#" type="button" class="btn button py-4 px-12 text-lg">
+            <a href="#" type="button" class="py-4 px-12 text-lg btn button unselectable lockable">
                Save the date
             </a>
          </section>
@@ -87,20 +102,20 @@
             </a>
          </section>
 
-         <div class="btn countdown write-and-countdown p-2 cursor-pointer
+         <div class="btn countdown write-and-countdown p-2 cursor-pointer lockable
             lg:absolute lg:bottom-12 lg:left-[75px]">
-            <button type="button" class="inner-btn text-md text-white countdown opacity-0
+            <button type="button" class="inner-btn text-md text-white countdown opacity-0 
                transition-all delay-50 duration-150 hover:font-semibold hover:text-[#5D7551]
-               lg:text-lg">
+               lg:text-lg lg:text-[#404040]">
                Cuenta Regresiva
             </button>
          </div>
 
-         <div class="btn write write-and-countdown p-2 cursor-pointer
+         <div class="btn write write-and-countdown p-2 cursor-pointer lockable
             lg:absolute lg:bottom-12 lg:right-[75px]">
-            <button type="button" class="inner-btn text-md text-white write opacity-0 
+            <button type="button" class="inner-btn text-md text-white write opacity-0 lockable
                transition-all delay-50 duration-150 hover:font-semibold hover:text-[#5D7551]
-               lg:text-lg">
+               lg:text-lg lg:text-[#404040]">
                Escribinos
             </button>
          </div>
