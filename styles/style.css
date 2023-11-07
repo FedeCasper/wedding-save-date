@@ -387,4 +387,15 @@ a {
     height: 390px;
     width: 270px;
   }
+  .modal{
+    position: fixed;
+    inset: 0;
+    z-index: 70;
+    height: 90%;
+    width: 90%;
+    margin: auto;
+    border-radius: 10px;
+    background: url('../assets/modal-web.png') no-repeat center/cover;
+    display: none;
+  }
 }

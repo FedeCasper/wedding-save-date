@@ -23,7 +23,9 @@
 
       <!-- Modal -->
       <div class="modal-container">
-         <div class="modal"></div>
+         <div class="modal">
+            <img id="close" src="../assets/btn-close.png" alt="Boton cerrar" class="absolute top-4 right-4 h-12 w-12 transition-all delay-50 duration-150 hover:cursor-pointer hover:scale-90 hover:drop-shadow-md">
+         </div>
       </div>
 
       <!-- Navbar -->
@@ -75,7 +77,7 @@
                </section>
 
                <!-- Button -->
-               <section class="absolute -bottom-2
+               <section class="absolute -bottom-2 lockable
                   lg:-bottom-14">
                   <button id="agendar-btn" type="button" 
                      class="py-4 px-12 rounded-lg bg-[#5F7752] text-white text-lg btn button unselectable">
@@ -92,7 +94,7 @@
 
          <div class="btn countdown write-and-countdown p-2 cursor-pointer
             lg:absolute lg:bottom-12 lg:left-[75px]">
-            <button type="button" class="inner-btn text-md countdown opacity-0
+            <button type="button" class="inner-btn text-md countdown opacity-0 lockable
                transition-all delay-50 duration-150 hover:font-semibold hover:text-[#5D7551]
                lg:text-lg">
                Cuenta Regresiva
@@ -101,7 +103,7 @@
 
          <div class="btn write write-and-countdown p-2 cursor-pointer
             lg:absolute lg:bottom-12 lg:right-[75px]">
-            <button type="button" class="inner-btn text-md write opacity-0 
+            <button type="button" class="inner-btn text-md write opacity-0 lockable
                transition-all delay-50 duration-150 hover:font-semibold hover:text-[#5D7551]
                lg:text-lg">
                Escribinos
