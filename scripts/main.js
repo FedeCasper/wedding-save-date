@@ -10,6 +10,20 @@ console.log($modal);
 const $btnClose = document.getElementById('close')
 console.log($btnClose);
 
+
+const miImagen = document.getElementById('main-pic');
+console.log(miImagen);
+
+// Oculta la imagen inicialmente
+// miImagen.style.display = 'none';
+
+// Escucha el evento 'load' de la imagen
+miImagen.addEventListener('load', function() {
+  // Una vez que la imagen se ha cargado, muéstrala
+  miImagen.style.display = 'block';
+});
+
+
 let url_1 = './pages/second.html'
 let url_2 = './pages/third.html'
 let url_3 = 'https://api.whatsapp.com/send?phone=2616189574'
