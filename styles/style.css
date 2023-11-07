@@ -95,7 +95,7 @@ body{
   }
 }
 
-@keyframes pic-grow {
+@keyframes opacity-animation {
   0% {
     opacity: 0;
   }
@@ -173,6 +173,10 @@ body{
   height: 13px;
   width: 13px;
   border-radius: 50%;
+}
+
+.header-titles{
+  animation: 0.7s ease-in-out 1s forwards opacity-animation;
 }
 
 .circle {
@@ -257,7 +261,7 @@ body{
   opacity: 0;
   transform: rotate(-15deg);
   transition: all 1s ease-in-out;
-  animation: 0.4s ease-in-out 1s forwards pic-grow;
+  animation: 0.4s ease-in-out 1s forwards opacity-animation;
 }
 
 .pic2 {
@@ -271,7 +275,7 @@ body{
   opacity: 0;
   transform: rotate(0);
   transition: all 1s ease-in-out;
-  animation: 0.4s ease-in-out 2s forwards pic-grow;
+  animation: 0.4s ease-in-out 2s forwards opacity-animation;
 }
 
 .pic3 {
@@ -285,7 +289,7 @@ body{
   opacity: 0;
   transform: rotate(15deg);
   transition: all 1s ease-in-out;
-  animation: 0.4s ease-in-out 3s forwards pic-grow;
+  animation: 0.4s ease-in-out 3s forwards opacity-animation;
 }
 
 /* --------------------------------------- */
