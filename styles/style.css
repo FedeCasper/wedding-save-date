@@ -211,10 +211,10 @@ body{
   z-index: 0;
   object-fit: contain;
   object-position: center;
-  /* background-image: url('../assets/main-pic.png');
+  background-image: url('../assets/main-pic.png');
   background-repeat: no-repeat;
   background-size: contain;
-  background-position: center; */
+  background-position: center;
   animation: 0.4s ease-in-out 1s forwards opacity-animation;
 }
 
