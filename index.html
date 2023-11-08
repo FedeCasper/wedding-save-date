@@ -18,7 +18,7 @@
 
 <body>
 
-   <section class="relative x h-[100vh] w-[100vw] flex flex-col justify-between items-center overflow-hidden">
+   <section class="relative x h-[100vh] w-[100vw] flex flex-col justify-between items-center bg-[url('../assets/background.png')] bg-contain bg-repeat overflow-hidden">
 
       <!-- Spinner text and circle -->
       <div alt="Frase giratoria"
@@ -35,7 +35,7 @@
       </div>
 
       <!-- Background picture -->
-      <div id="main-pic"></div>
+      <div id="main-pic" class="opacity-0"></div>
 
       <!-- Navbar -->
       <nav class="relative h-[10vh] w-full grid gap-2 grid-cols-3 
@@ -67,14 +67,14 @@
             <div class="h-[85%] w-80 flex flex-col justify-center items-center gap-2 z-10
                lg:w-5/12">
                <img src="./assets/header-tittle-mobile.png" alt="title"
-                  class="w-7/12 mb-4 drop-shadow-[4px_4px_5px_#404040]
+                  class="w-7/12 mb-4 drop-shadow-lg
                      lg:mb-12">
                <img src="./assets/names.png" alt="names" 
-                  class="w-5/6 mb-4 drop-shadow-[4px_4px_5px_#404040]
+                  class="w-5/6 mb-4 drop-shadow-lg
                      lg:w-11/12">
                <div class="w-3/6 border-2 border-t-[#C49F5F] border-x-transparent border-b-transparent
                   lg:w-5/12 lg:mt-6"></div>
-               <h3 class="text-center text-white text-[22px] mt-2 drop-shadow-[4px_4px_5px_#404040]
+               <h3 class="text-center text-white text-[22px] mt-2 drop-shadow-lg
                   lg:text-4xl lg:mt-10">
                   9 de marzo 2024
                </h3>
@@ -95,7 +95,7 @@
       <footer class="h-[25vh] flex flex-col items-center gap-1 pt-4 z-50 mb-auto
          lg:w-full">
          
-         <section class="hidden absolute bottom-36 
+         <section class="hidden absolute bottom-36 opacity-animation
             lg:flex">
             <a href="#" type="button" class="btn button py-4 px-12 text-lg">
                Save the date
