@@ -30,7 +30,10 @@
       <!-- Modal -->
       <div class="modal-container">
          <div class="modal">
-            <img id="close" src="./assets/btn-close.png" alt="Boton cerrar" class="absolute top-4 right-4 h-12 w-12 transition-all delay-50 duration-150 hover:cursor-pointer hover:scale-90 hover:drop-shadow-md">
+            <img id="close" src="./assets/btn-close.png" alt="Boton cerrar" 
+               class="absolute top-4 right-4 h-12 w-12
+                  transition-all delay-50 duration-150 hover:cursor-pointer hover:scale-90 hover:drop-shadow-md hover:rotate-90
+                  lg:top-8 lg:right-8">
          </div>
       </div>
 
@@ -54,6 +57,7 @@
          </section>
          <button type="button" title="Regalo"
             class="h-12 w-12 flex justify-self-end items-center self-end bg-[url('./assets/icon-close.png')] bg-contain unselectable col-start-3 col-end-3 me-[35px] mt-[35px] lockable
+               transition hover:scale-95
                active:bg-[url('./assets/icon-open.png')]
                lg:me-[50px] lg:mt-[50px]">
          </button>
@@ -105,7 +109,7 @@
          <div class="btn countdown write-and-countdown p-2 cursor-pointer lockable
             lg:absolute lg:bottom-12 lg:left-[75px]">
             <button type="button" class="inner-btn text-md text-white countdown opacity-0 
-               transition-all delay-50 duration-150 hover:font-semibold hover:text-[#5D7551]
+               transition-all delay-50 duration-150 hover:text-[#5D7551]
                lg:text-lg lg:text-[#404040]">
                Cuenta Regresiva
             </button>
@@ -113,8 +117,8 @@
 
          <div class="btn write write-and-countdown p-2 cursor-pointer lockable
             lg:absolute lg:bottom-12 lg:right-[75px]">
-            <button type="button" class="inner-btn text-md text-white write opacity-0 lockable
-               transition-all delay-50 duration-150 hover:font-semibold hover:text-[#5D7551]
+            <button type="button" class="inner-btn text-md text-white write opacity-0 lockable	
+               transition delay-50 duration-150 hover:text-[#5D7551] 
                lg:text-lg lg:text-[#404040]">
                Escribinos
             </button>

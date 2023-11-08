@@ -14,16 +14,16 @@ html, body {
 
   
 body{
-  background: var(--mycream);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: Helvetica Neue;
-  color: var(--mygray);
-  
+	background: var(--mycream);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: Helvetica Neue;
+	color: var(--mygray);
+
   > * {
-    margin: auto;
-  }
+   	margin: auto;
+	}
 }
 
 .main-example {
@@ -70,7 +70,7 @@ body{
 	background: var(--mycream);
 	color: var(--mygray);
 	display: block;
-  	font-weight: bold;
+	font-weight: bold;
 	font-size: 4em;
 	line-height: 2.4em;
 	overflow: hidden;
@@ -92,8 +92,9 @@ body{
 	transform-style: flat;
 }
 .main-example .count.top {
-	border-top: 1px solid rgba(255,255,255,0.2);
-	border-bottom: 1px solid rgba(255,255,255,0.1);
+
+	border-top: 1px solid rgba(239, 0, 0, 0.2);
+	border-bottom: 1px solid rgba(250, 7, 7, 0.1);
 	border-radius: 5px 5px 0 0;
 	height: 50%;
 
@@ -104,6 +105,7 @@ body{
 	transform-origin: 50% 100%;
 }
 .main-example .count.bottom {
+
 	background-image: linear-gradient(rgba(255,255,255,0.1), transparent);
 	background-image: -webkit-linear-gradient(rgba(255,255,255,0.1), transparent);
 	background-image: -moz-linear-gradient(rgba(255,255,255,0.1), transparent);
@@ -130,10 +132,11 @@ body{
 	position: absolute;
 	top: 95px;
 	width: 100%;
-  color: var(--mycream);
+	color: var(--mycream);
 }
 /* Animation start */
 .main-example .count.curr.top {
+
 	-webkit-transform: rotateX(0deg);
 	-moz-transform: rotateX(0deg);
 	-ms-transform: rotateX(0deg);
@@ -194,4 +197,26 @@ body{
 .main-example .label {
 	font-size: 0.8em;
 	top: 72px;
+}
+
+@media screen and (min-width: 1024px){
+	.main-example .countdown-container {
+		height: 150px;
+	}
+	.main-example .time {
+		height: 130px;
+		width: 100px;
+
+	}
+	.main-example .count {
+		font-size: 3.8em;
+		line-height: 70px;
+	}
+	.main-example .count.top {
+		padding-top: 28px;
+	}
+	.main-example .label {
+		font-size: 1em;
+		top: 130px;
+	}
 }

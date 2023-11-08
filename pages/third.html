@@ -29,7 +29,9 @@
       <!-- Modal -->
       <div class="modal-container">
          <div class="modal">
-            <img id="close" src="../assets/btn-close.png" alt="Boton cerrar" class="absolute top-4 right-4 h-12 w-12 transition-all delay-50 duration-150 hover:cursor-pointer hover:scale-90 hover:drop-shadow-md">
+            <img id="close" src="../assets/btn-close.png" alt="Boton cerrar" 
+               class="absolute top-4 right-4 h-12 w-12 
+                  transition-all delay-50 duration-150 hover:cursor-pointer hover:scale-90 hover:rotate-90 hover:drop-shadow-md">
          </div>
       </div>
 
@@ -55,6 +57,7 @@
          </section>
          <button type="button" title="Regalo"
             class="h-12 w-12 flex justify-self-end items-center self-end bg-[url('../assets/icon-close.png')] bg-contain unselectable col-start-3 col-end-3 me-[35px] mt-[35px] lockable z-50
+               transition hover:scale-95
                active:bg-[url('../assets/icon-open.png')]
                lg:me-[50px] lg:mt-[50px]">
          </button>
@@ -66,16 +69,25 @@
 
          <article id="spinner" class="relative w-full flex flex-col justify-center items-center py-6 h-5/6 z-10">
 
-            <section class="h-[15%] relative flex flex-col justify-end items-center gap-2  z-10">
-               <img src="../assets/rounded-text-countdown.png" class="spinner-text absolute h-24 w-24 -left-8 -top-8 z-10" alt="Fecha giratoria"/><div
-                  class="w-fit bg-[url('../assets/background.png')] flex flex-col justify-end items-center z-30 py-1 px-2">
-                  <div class="bg-white h-12 w-12 rounded-full absolute -top-[10px] -left-[5px] z-30"></div>
-                  <img src="../assets/header-tittle.png" alt="title" class="h-[1.2rem] mb-2 relative z-40">
-                  <img src="../assets/names.png" alt="names" class="h-[2.2rem] mb-4 relative z-40">
+            <section class="h-[15%] relative flex flex-col justify-end items-center gap-2  z-10
+               lg:h-[5%]">
+               <img src="../assets/rounded-text-countdown.png" alt="Fecha giratoria"
+                  class="spinner-text absolute h-24 w-24 -left-8 -top-8 z-10
+                     lg:-top-[80px] lg:-left-[45px]"/>
+               <div class="w-fit bg-[url('../assets/background.png')] flex flex-col justify-end items-center z-30 py-1 px-2">
+                  <div class="bg-white h-12 w-12 rounded-full absolute -top-[10px] -left-[5px] z-30
+                     lg:-top-[60px] lg:-left-[20px]"></div>
+                  <img src="../assets/header-tittle.png" alt="title" 
+                     class="h-[1.2rem] mb-2 relative z-40
+                        lg:h-[1.5rem] lg:mb-4">
+                  <img src="../assets/names.png" alt="names" 
+                     class="h-[2.2rem] mb-4 relative z-40 
+                     lg:h-[3rem]">
                </div>
             </section>
 
-            <div class="h-[70%] w-full flex flex-col justify-end items-center gap-2 pb-14 z-10">
+            <div class="h-[70%] w-full flex flex-col justify-end items-center gap-2 pb-14 z-10
+               lg:pb-0">
                <h2 class="mb-4 text-white text-xl
                   lg:text-3xl lg:mb-6">
                   Faltan...
@@ -87,7 +99,8 @@
             </div>
 
             <button id="agendar-btn" type="button"
-               class="py-4 px-12 rounded-lg bg-[#5F7752] text-white text-lg button unselectable">
+               class="py-4 px-12 rounded-lg bg-[#5F7752] text-white text-lg button unselectable
+                  lg:hidden">
                Agendar
             </button>
 
@@ -97,11 +110,21 @@
 
       <!-- Footer -->
       <footer class="h-[15vh] w-full flex justify-center">
+
          <!-- Background curve -->
          <div class="h-[65vh] w-[150vw] absolute bottom-0 bg-[url('../assets/rounded-background.png')] bg-contain bg-repeat rounded-tl-full rounded-tr-full
-               md:w-[120vw] lg:w-[130vh]
-            ">
+               md:w-[120vw] lg:w-[130vh]">
          </div>
+
+         <!-- Desktop button -->
+         <section class="hidden absolute bottom-36 opacity-animation
+            lg:flex">
+            <button type="button" 
+               class="py-4 px-12 rounded-lg bg-[#5F7752] text-white text-lg btn button unselectable">
+               Agendar
+            </button>
+         </section>
+
       </footer>
 
    </section>

@@ -8,7 +8,7 @@
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
    <script src="https://cdn.tailwindcss.com"></script>
-   <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon">
+   <link rel="shortcut icon" href="../assets/favicon.png" type="image/x-icon">
    <link rel="stylesheet" href="../styles/style.css">
    <title>Agendar</title>
 </head>
@@ -24,7 +24,9 @@
       <!-- Modal -->
       <div class="modal-container">
          <div class="modal">
-            <img id="close" src="../assets/btn-close.png" alt="Boton cerrar" class="absolute top-4 right-4 h-12 w-12 transition-all delay-50 duration-150 hover:cursor-pointer hover:scale-90 hover:drop-shadow-md">
+            <img id="close" src="../assets/btn-close.png" alt="Boton cerrar" 
+               class="absolute top-4 right-4 h-12 w-12 
+               lg:transition-all delay-50 duration-150 hover:cursor-pointer hover:scale-90 hover:rotate-90 hover:drop-shadow-md">
          </div>
       </div>
 
@@ -45,6 +47,7 @@
          </section>
          <button type="button" title="Regalo"
             class="h-12 w-12 flex justify-self-end items-center self-end bg-[url('../assets/icon-close.png')] bg-contain unselectable col-start-3 col-end-3 me-[35px] mt-[35px] lockable
+               transition hover:scale-95
                active:bg-[url('../assets/icon-open.png')]
                lg:me-[50px] lg:mt-[50px]">
          </button>
@@ -59,7 +62,9 @@
             class="circle relative w-[100vw] h-[85%] flex flex-col justify-center items-center z-10 bg-[url('../assets/bg-circle.png')] bg-contain bg-no-repeat bg-center">
 
                <!-- Photos -->
-               <section id="pics-container" class="absolute group w-11/12 h-[20rem] flex flex-col justify-center items-center z-30">
+               <section id="pics-container" 
+                  class="absolute group w-11/12 h-[20rem] flex flex-col justify-center items-center z-30
+                  lg:w-1/4">
                      <div id="first-pic" class="pic1 z-50"></div>
                      <div id="second-pic" class="pic2 z-50"></div>
                      <div id="third-pic" class="pic3 z-50"></div>
@@ -77,9 +82,9 @@
                </section>
 
                <!-- Button -->
-               <section class="absolute -bottom-2 lockable
+               <section class="absolute -bottom-2 
                   lg:-bottom-14 lg:hidden">
-                  <button id="agendar-btn" type="button" 
+                  <button type="button" 
                      class="py-4 px-12 rounded-lg bg-[#5F7752] text-white text-lg btn button unselectable">
                      Agendar
                   </button>
@@ -92,26 +97,30 @@
       <!-- Footer -->
       <footer class="h-[25vh] flex flex-col items-center gap-1 pt-4 z-50 mb-auto">
 
-         <section id="" class="hidden absolute bottom-36 opacity-animation
+         <!-- Desktop button -->
+         <section class="hidden absolute bottom-36 opacity-animation
             lg:flex">
-            <a href="#" type="button" class="btn button py-4 px-12 text-lg">
+            <button type="button" 
+               class="py-4 px-12 rounded-lg bg-[#5F7752] text-white text-lg btn button unselectable">
                Agendar
-            </a>
+            </button>
          </section>
 
+         <!-- Cuenta regresiva button -->
          <div class="btn countdown write-and-countdown p-2 cursor-pointer
             lg:absolute lg:bottom-12 lg:left-[75px]">
             <button type="button" class="inner-btn text-md countdown opacity-0 lockable
-               transition-all delay-50 duration-150 hover:font-semibold hover:text-[#5D7551]
+               transition-all delay-50 duration-150 hover:text-[#5D7551]
                lg:text-lg">
                Cuenta Regresiva
             </button>
          </div>
 
+         <!-- Escribinos button -->
          <div class="btn write write-and-countdown p-2 cursor-pointer
             lg:absolute lg:bottom-12 lg:right-[75px]">
             <button type="button" class="inner-btn text-md write opacity-0 lockable
-               transition-all delay-50 duration-150 hover:font-semibold hover:text-[#5D7551]
+               transition-all delay-50 duration-150 hover:text-[#5D7551]
                lg:text-lg">
                Escribinos
             </button>

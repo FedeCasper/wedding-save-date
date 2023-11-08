@@ -1,4 +1,3 @@
-const $agendarBtn = document.getElementById('agendar-btn')
 const $btnModal = document.querySelector('button[title="Regalo"]');
 console.log($btnModal);
 const $modalContainer = document.querySelector('.modal-container');
@@ -8,7 +7,7 @@ const $btnClose = document.getElementById('close')
 console.log($btnClose);
 const $lockablesElements = document.querySelectorAll('.lockable');
 console.log($lockablesElements);
-
+const $buttons = document.querySelectorAll('.btn');
 
 function toogleModal(modalElement, modalContainerElement, lockableElementsList) {
    modalElement.style.display = $modal.style.display === 'none' || $modal.style.display === '' ? 'block' : 'none';
@@ -26,13 +25,15 @@ function redirectionDelay() {
    }, 1000);
 }
 
-$agendarBtn.addEventListener('click', redirectionDelay)
-$agendarBtn.addEventListener('touchstart', redirectionDelay)
-
 $btnModal.addEventListener('click', () => {
    toogleModal($modal, $modalContainer, $lockablesElements);
 });
 
 $btnClose.addEventListener('click', () => {
    toogleModal($modal, $modalContainer, $lockablesElements);
+})
+
+$buttons.forEach( button => {
+   button.addEventListener( 'click', redirectionDelay );
+   button.addEventListener( 'touchstart', redirectionDelay );
 })
