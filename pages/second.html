@@ -14,7 +14,7 @@
 </head>
 <body>
 
-   <section class="relative h-[100vh] flex flex-col justify-center items-center bg-[url('../assets/background.png')] bg-contain bg-repeat overflow-hidden">
+   <section class="relative h-[100vh] flex flex-col justify-center items-center bg-[url('../assets/background.png')] bg-cover overflow-hidden">
       
       <!-- Spinner text and circle -->
       <img src="../assets/rounded-text.png" alt="Frase giratoria"
@@ -78,7 +78,7 @@
 
                <!-- Button -->
                <section class="absolute -bottom-2 lockable
-                  lg:-bottom-14">
+                  lg:-bottom-14 lg:hidden">
                   <button id="agendar-btn" type="button" 
                      class="py-4 px-12 rounded-lg bg-[#5F7752] text-white text-lg btn button unselectable">
                      Agendar
@@ -91,6 +91,13 @@
 
       <!-- Footer -->
       <footer class="h-[25vh] flex flex-col items-center gap-1 pt-4 z-50 mb-auto">
+
+         <section id="" class="hidden absolute bottom-36 opacity-animation
+            lg:flex">
+            <a href="#" type="button" class="btn button py-4 px-12 text-lg">
+               Agendar
+            </a>
+         </section>
 
          <div class="btn countdown write-and-countdown p-2 cursor-pointer
             lg:absolute lg:bottom-12 lg:left-[75px]">

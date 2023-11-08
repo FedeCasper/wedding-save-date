@@ -179,6 +179,11 @@ body{
   animation: 1.5s ease-in-out 1s forwards opacity-animation;
 }
 
+.opacity-animation{
+  opacity: 0;
+  animation: 1.5s ease-in-out 1s forwards opacity-animation;
+}
+
 .circle {
   animation: cirle-rotation 2s ease-in-out;
 }
