@@ -8,6 +8,7 @@ console.log($btnClose);
 const $lockablesElements = document.querySelectorAll('.lockable');
 console.log($lockablesElements);
 const $buttons = document.querySelectorAll('.btn');
+console.log($buttons);
 
 function toogleModal(modalElement, modalContainerElement, lockableElementsList) {
    modalElement.style.display = $modal.style.display === 'none' || $modal.style.display === '' ? 'block' : 'none';
